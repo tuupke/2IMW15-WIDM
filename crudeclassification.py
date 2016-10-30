@@ -23,11 +23,96 @@ class Cluster:
 				self.authors.add(tweet.author)
 		
 		return authors
+	
+	def sortTweets(self):
+		self.tweets.sort(lambda tweet : tweet.time)
 
 def getReliabilityScore(author):
 	return 0.5
 
 #</dummy classes>
+##################
+#<helper classes>
+
+class ClusterCollection:
+	def __init__(self, clusterIDs):
+		self.clusterIDs = clusterIDs
+	
+	def __iter__(self):
+		return self
+	
+	def size(self):
+		return len(self.clusterIDs)
+	
+	def get(self, index):
+		clusterID = self.clusterIDs[index]
+		return self.loadCluster(clusterID)
+	
+	def loadCluster(self, clusterID):
+		# some database stuff
+		# return collection of Tweet objects
+		return []
+
+class ClustercollectionIterator:
+	current = 0
+	
+	def __init__(self, clusterCollection):
+		self.clusterCollection = clusterCollection
+	
+	def __iter__(self):
+		return self
+	
+	def __next__(self):
+		if self.clusterCollection.size() > self.current:
+			return self.clusterCollection.get(self.current)
+		else:
+			raise StopIteration
+
+# returns a list, the ith value in the list corresponds to
+# the value of func given tweets up to start+i*interval (timestamp)
+# func accepts one tweet at a time and a state
+# func returns a pair (value, newState)
+def calculateTimeSeries(sortedTweets, start, interval, func):
+	state = None
+	mark = start
+	result = []
+	value = None
+	for tweet in sortedTweets:
+		if tweet.time > mark:
+			result.append(value)
+			mark += interval
+		(value, state) = func(tweet, state)
+	
+	result.append(value)
+	
+	return result
+	
+
+#config:
+minReliableAuthors = 10
+minTotalReliability = 0.8*minReliableAuthors
+
+def calculateClusterReliability(cluster, threshold):
+	state = {}
+	for tweet in cluster.tweets:
+		value, state = calculateClusterReliability_stream(tweet, state)
+		if value >= threshold:
+			return value
+	
+	return value
+
+def calculateClusterReliability_stream(tweet, state):
+	if tweet.author not in state.keys():
+		score = getReliabilityScore(tweet.author)
+		if len(state) < minReliableAuthors or min(state.values) < score:
+			state[auth] = score
+			while len(state) > minReliableAuthors:
+				# list of most reliable authors is too long
+				# remove least reliable author
+				del state[min(state, key=state.get)]
+	
+	return sum(state), state
+#</helper classes>
 ##################
 
 class ClusterClass(Enum):
@@ -41,9 +126,6 @@ class ClusterClass(Enum):
 
 # Picks out some clusters that are 'obviously' true or false, leaves the rest unclassified
 class CrudeClassifyer:
-	#config:
-	minReliableAuthors = 10
-	minTotalReliability = 0.8*minReliableAuthors
 	
 	
 	# @param clusters a set of objects of type Cluster
@@ -73,18 +155,7 @@ class CrudeClassifyer:
 		return classification
 		
 	def confirmedTest(self, cluster):
-		authors = cluster.getAuthors()
-		reliableAuthors = []
-		for author in authors:
-			score = getReliabilityScore(author)
-			if len(reliableAuthors) < self.minReliableAuthors or reliableAuthors[0] < score:
-				reliableAuthors.append(score)
-				reliableAuthors.sort()
-				if len(reliableAuthors) > self.minReliableAuthors:
-					del reliableAuthors[0]
-			if sum(reliableAuthors) > self.minTotalReliability:
-				return True
-		return False
+		return minTotalReliability < self.calculateClusterReliability(cluster, threshold=minTotalReliability)
 	
 	def deniedTest(self, cluster):
 		# as of yet, we have no way to conclude that the cluster should be classified as 'denied'
@@ -94,4 +165,11 @@ class CrudeClassifyer:
 		# this cluster was classified as confirmed
 		# let's see why and try to learn from it
 		# store what we learned in instance vars so that self.deniedTest can use the knowledge
+		
+		cluster.sortTweets()
+		volume = calculateTimeSeries(cluster, start, interval, lambda tweet, state: 1)
+		reliability = calculateTimeSeries(cluster, start, interval, calculateClusterReliability_stream)
+		
+		# TODO: plot volume and reliability over time, hope that there's a good (combination of) features
+		# in the curves that can be used
 		pass
