@@ -3,25 +3,27 @@ import nltk
 from sklearn.feature_extraction.text import *
 import re
 
-adj_adv = []
+verb_noun = []
 
 with open('positive-words.txt') as f:
     positive = f.read().splitlines()
 
 for word in positive:
     tokens = nltk.pos_tag(nltk.word_tokenize(word))
-    if tokens[0][1].startswith("J") | tokens[0][1].startswith("R"):
-      adj_adv.append(word)
+    if tokens[0][1].startswith("V") | tokens[0][1].startswith("N"):
+      verb_noun.append(word)
 
 with open('negative.txt','r') as f:
     negative = f.read().splitlines()
 
 for word in negative:
     tokens = nltk.pos_tag(nltk.word_tokenize(word))
-    if tokens[0][1].startswith("J") | tokens[0][1].startswith("R"):
-        adj_adv.append(word)
+    if tokens[0][1].startswith("V") | tokens[0][1].startswith("N"):
+        verb_noun.append(word)
 
-print(adj_adv)
+with open('vulgair.txt') as f:
+    vulgair = f.read().splitlines()
+
 emoticons = ["*O", "*-*", "*O*", "*o*", "* *",
                 ":P", ":D", ":d", ":p",
                 ";P", ";D", ";d", ";p",
@@ -57,13 +59,18 @@ auxiliary = ["be", "is", "are","was","were"
 "will",
 "would"]
 
-sentiment = positive + negative + emoticons
-print(len(sentiment))
-print(len(adj_adv))
-sentiment = [x for x in sentiment if x not in adj_adv]
-print(len(sentiment))
+statement = ["says","saying","said","claims","claimed","claiming","promising","explaining"
+             "stated","it is the case","promises","promised","explains","explained","claim"]
 
-tweetArray = []
+#preparing the sentiment set
+sentiment = positive + negative + emoticons
+
+for i in vulgair:
+    if i not in sentiment:
+        sentiment.append(i)
+
+sentiment = [x for x in sentiment if x not in verb_noun]
+
 with open('tweets.csv', newline='', encoding='UTF-8') as csvfile:
      spamreader = csv.reader(csvfile, delimiter='\t', quotechar='|')
      for row in spamreader:
@@ -99,25 +106,22 @@ with open('tweets.csv', newline='', encoding='UTF-8') as csvfile:
              #print(row[3])
              tweetArray.append(row[3])
 
-
 #removing sentiment and emoticon from tweets and cleaning out urls
 wrong = []
 for line in tweetArray:
     tokens = nltk.pos_tag(nltk.word_tokenize(line))
-    if any(emotion in line.lower() for emotion in sentiment):
+    lowertext = line.lower()
+    if tokens[0][0].lower() in auxiliary:
+        wrong.append(line)
+    elif any(state in lowertext for state in statement):
+        continue
+    elif any(emotion in lowertext for emotion in sentiment):
         wrong.append(line)
     #removing tags that start with a verb (question removal)
-    elif tokens[0][0].lower() in auxiliary:
-        wrong.append(line)
-
-print(len(wrong))
-print(len(tweetArray))
 
 tweetArray = [x for x in tweetArray if x not in wrong]
-
-
-print(tweetArray)
 print(len(tweetArray))
+print(tweetArray)
 print(wrong)
 #preparing for clustering
 stemmer = nltk.SnowballStemmer("english")
