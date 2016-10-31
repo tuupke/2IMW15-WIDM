@@ -1,13 +1,23 @@
 from enum import Enum
+import MySQLdb
+
+#################
+#<database connection>
+cnx = MySQLdb.connect(user='root', passwd='',
+             host='127.0.0.1', db='wirdm', charset="utf8mb4")
+cursor = cnx.cursor()
 
 #################
 #<dummy classes>
 
 class Tweet:
-	def __init__(self, author, text, time):
-		self.author = author
-		self.text   = text
-		self.time   = time
+	def __init__(self, author, text, statement, time, favCount, retCount):
+		self.author    = author
+		self.text      = text
+		self.statement = statement
+		self.time      = time
+		self.favCount  = favCount
+		self.retCount  = retCount
 
 class Cluster:
 	authors = None
@@ -27,8 +37,15 @@ class Cluster:
 	def sortTweets(self):
 		self.tweets.sort(lambda tweet : tweet.time)
 
-def getReliabilityScore(author):
-	return 0.5
+def getReliabilityScore(username):
+
+    sql = "select COMPUTED/max(COMPUTED) from users where username=%s"
+    cursor.execute(sql, (username, ))
+
+    if cursor.rowcount != 1:
+        return 1;
+
+    return cursor.fetchone()[0]
 
 #</dummy classes>
 ##################
