@@ -46,21 +46,22 @@ emoticons = ["*O", "*-*", "*O*", "*o*", "* *",
                 "[:", ";]"
                 ]
 
-auxiliary = ["be", "is", "are","was","were"
-"can",
-"could",
-"do",
-"have","has","had",
+auxiliary = ["be", "is", "are","was","were","isn't","aren't","weren't",
+"can","can't",
+"could","couldn't",
+"do","doesn't","does","don't",
+"have","has","had","haven't","hasn't",
 "may",
 "might",
-"must",
+"must","mustn't",
 "shall",
-"should",
-"will",
-"would"]
+"should","shouldn't",
+"will","won't",
+"would","wouldn't"]
 
 statement = ["says","saying","said","claims","claimed","claiming","promising","explaining"
-             "stated","it is the case","promises","promised","explains","explained","claim"]
+             "stated","it is the case","promises","promised","explains","explained","claim","admit","admitted","agree",
+             "agreeing","agrees","agreed","reply","replies","replied"]
 
 #preparing the sentiment set
 sentiment = positive + negative + emoticons
@@ -70,6 +71,8 @@ for i in vulgair:
         sentiment.append(i)
 
 sentiment = [x for x in sentiment if x not in verb_noun]
+
+tweetArray = []
 
 with open('tweets.csv', newline='', encoding='UTF-8') as csvfile:
      spamreader = csv.reader(csvfile, delimiter='\t', quotechar='|')
