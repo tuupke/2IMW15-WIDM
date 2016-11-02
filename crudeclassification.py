@@ -10,14 +10,30 @@ cursor = cnx.cursor()
 #################
 #<dummy classes>
 
+class Author:
+	def __init__(self, name, account_created, verified, followers, folowees, reliability):
+		self.name = name
+		self.account_created = account_created
+		self.verified = verified
+		self.followers = followers
+		self.folowees = folowees
+		self.reliability = self.getReliabilityScore(name)
+
+	def getReliabilityScore(username):
+		sql = "select COMPUTED/max(COMPUTED) from users where username=%s"
+    		cursor.execute(sql, (username, ))
+    		if cursor.rowcount != 1:
+        		return 1;
+    		return cursor.fetchone()[0]
+
 class Tweet:
 	def __init__(self, author, text, statement, time, favCount, retCount):
-		self.author    = author
-		self.text      = text
-		self.statement = statement
-		self.time      = time
-		self.favCount  = favCount
-		self.retCount  = retCount
+		self.author          = author
+		self.text            = text
+		self.statement       = statement
+		self.time            = time
+		self.favCount        = favCount
+		self.retCount        = retCount
 
 class Cluster:
 	authors = None
@@ -36,16 +52,6 @@ class Cluster:
 	
 	def sortTweets(self):
 		self.tweets.sort(lambda tweet : tweet.time)
-
-def getReliabilityScore(username):
-
-    sql = "select COMPUTED/max(COMPUTED) from users where username=%s"
-    cursor.execute(sql, (username, ))
-
-    if cursor.rowcount != 1:
-        return 1;
-
-    return cursor.fetchone()[0]
 
 #</dummy classes>
 ##################

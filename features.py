@@ -18,11 +18,13 @@ def generate_features(tweets):
         tok_tweets.append(nltk.word_tokenize(tweet.text))
         tok_statements.append(nltk.word_tokenize(tweet.statement))
     results = []
-    results.append(negated_feature(tok_tweets))
+    results.append(negated_feature(tok_statements))
     results.append(vulgar_feature(tok_tweets, vulgar))
-    results.append(abbreviation_feature(tok_tweets, abbreviation))
-    results.append(word_complexity_feature(tok_tweets))
-    results.append(sentence_complexity_feature(tweets))
+    results.append(abbreviation_feature(tok_statements, abbreviation))
+    results.append(word_complexity_feature(tok_statements))
+    results.append(sentence_complexity_feature(tok_statements))
+    results.append(role_feature(tweets))
+    results.append(engagement_feature(tweets))
     return results
 
 def get_vulgar_words():
@@ -81,6 +83,8 @@ def word_complexity_feature(tok_tweets):
         for tok in tok_tweet:
             count += 1
             size += len(tok)
+    if (len(tok_tweets) == 0):
+        return 1
     return count/size
 
 
@@ -115,7 +119,42 @@ def sentence_complexity_feature(tweets):
             tree.pretty_print()
             print(tree_depth(tree, 1))
             size += tree_depth(tree, 1)
+    if count == 0:
+        return 1
     return count/size
+
+# ---- End sentence complexity ----
+
+def influence_feature(tweets_class):
+    followers = 0
+    count = 0
+    for tweet in tweets_class:
+        followers += tweet.author.followers
+        count += 1
+    if count == 0:
+        return 1
+    return count/followers
+
+def role_feature(tweets_class):
+    role_fraction_count = 0
+    count = 0
+    for tweet in tweets_class:
+        role_fraction_count += tweet.author.followers/tweet.author.folowees
+        count += 1
+    if count == 0:
+        return 1
+    return count/role_fraction_count
+
+def engagement_feature(tweets_class):
+    role_fraction_count = 0
+    count = 0
+    for tweet in tweets_class:
+        role_fraction_count += tweet.author.followers/tweet.author.folowees
+        count += 1
+    if count == 0:
+        return 1
+    return count/role_fraction_count
+    
     
 
 tweets = ["Hi this is an american asshole test", "Hi irl this isn't a test", "The quick brown fox jumps over the lazy dog. I burned dinner because I was watching The Walking Dead, but not the cake because I started paying attention to the oven timer when I smelled smoke."]
