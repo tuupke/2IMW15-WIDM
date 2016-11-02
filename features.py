@@ -4,6 +4,27 @@ import nltk.sentiment.vader
 import spacy
 from nltk import Tree
 
+vulgar = get_vulgar_words()
+abbreviation = get_abbreviations()
+
+def generate_features(tweets):
+    str_statements = []
+    tok_statements = []
+    str_tweets = []
+    tok_tweets = []
+    for tweet in tweets:
+        str_statement.append(tweet.statement)
+        str_tweets.append(tweet.text)
+        tok_tweets.append(nltk.word_tokenize(tweet.text))
+        tok_statements.append(nltk.word_tokenize(tweet.statement))
+    results = []
+    results.append(negated_feature(tok_tweets))
+    results.append(vulgar_feature(tok_tweets, vulgar))
+    results.append(abbreviation_feature(tok_tweets, abbreviation))
+    results.append(word_complexity_feature(tok_tweets))
+    results.append(sentence_complexity_feature(tweets))
+    return results
+
 def get_vulgar_words():
     list = []
     f = open('vulgar_words.txt', 'r')
