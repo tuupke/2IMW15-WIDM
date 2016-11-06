@@ -7,6 +7,7 @@ from sklearn.cluster import *
 from sklearn.externals import joblib
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.cluster.hierarchy import linkage, ward, dendrogram
+import langdetect as ld
 import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
@@ -33,6 +34,7 @@ if not my_file.is_file():
 
     with open('negative.txt','r') as f:
         negative = f.read().splitlines()
+
 
     for word in negative:
         tokens = nltk.pos_tag(nltk.word_tokenize(word))
@@ -120,14 +122,49 @@ if not my_file.is_file():
             if filtered.find('if') != -1:
                 continue
 
-            tweetArray.append(tweet)
+            tweetArray.append(filtered)
 
     print("starting sentiment analysis")
+    print(len(tweetArray))
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
+
+
+    def get_language_likelihood(input_text):
+        """Return a dictionary of languages and their likelihood of being the
+        natural language of the input text
+        """
+
+        input_text = input_text.lower()
+        input_words = nltk.wordpunct_tokenize(input_text)
+
+        language_likelihood = {}
+        total_matches = 0
+        for language in nltk.stopwords._fileids:
+            language_likelihood[language] = len(set(input_words) &
+                                                set(nltk.stopwords.words(language)))
+
+        return language_likelihood
+
+
+    def get_language(input_text):
+        """Return the most likely language of the given text
+        """
+
+        likelihoods = get_language_likelihood(input_text)
+        return sorted(likelihoods, key=likelihoods.get, reverse=True)[0]
+
     for line in tweetArray:
-        tokens = nltk.pos_tag(nltk.word_tokenize(line))
         lowertext = line.lower()
+        tokens = nltk.pos_tag(nltk.word_tokenize(line))
+        print(line)
+        print(tokens)
+        print(tokens[0][0])
+        try:
+            if(ld.detect(lowertext)!= "en"):
+                    wrong.append(line)
+        except ld.lang_detect_exception.LangDetectException:
+            print(line)
         if tokens[0][0].lower() in auxiliary:
             wrong.append(line)
         elif any(state in lowertext for state in statement):
@@ -176,7 +213,7 @@ my_file2 = Path("names.pkl")
 if not my_file.is_file() or not my_file2.is_file():
     vectorizer = TfidfVectorizer(max_df=0.95,
                                  min_df=0, stop_words='english',
-                                 use_idf=True, tokenizer=tokenize_only, ngram_range=(1, 3))
+                                 use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
     vector = vectorizer.fit_transform(tweetArray)
     names = vectorizer.get_feature_names()
