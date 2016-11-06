@@ -94,6 +94,8 @@ if not my_file.is_file():
 
     cursor.execute("select * from tweets")
 
+    better = []
+
     for row in cursor.fetchall():
 
         tweet = row[1]
@@ -121,12 +123,18 @@ if not my_file.is_file():
                 continue
             if filtered.find('if') != -1:
                 continue
-            if len(filtered.split()) < 3:
+            if len(filtered.split()) < 1:
                 continue
 
             tweetArray.append(filtered)
+        better.append(tweet)
+
+    for tweet in tweetArray[:100]:
+        print(tweet)
 
     print("starting sentiment analysis")
+
+
     print(len(tweetArray))
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
@@ -134,7 +142,6 @@ if not my_file.is_file():
     for line in tweetArray:
         lowertext = line.lower()
         tokens = nltk.pos_tag(nltk.word_tokenize(line))
-        print(line)
         #print(tokens)
         #rint(tokens[0][0])
         try:
@@ -157,14 +164,13 @@ else:
     tweetArray = joblib.load('tweets.pkl')
 print("tweetsread")
 
-
 #preparing for clustering
 stemmer = nltk.SnowballStemmer("english")
 stopwords = nltk.corpus.stopwords.words('english')
 
 def tokenize_and_stem(text):
     # first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
-    tokens = [word for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
+    tokens = [word.lower() for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
     filtered_tokens = []
     # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
     for token in tokens:
@@ -189,7 +195,7 @@ my_file = Path("vector.pkl")
 my_file2 = Path("names.pkl")
 if not my_file.is_file() or not my_file2.is_file():
     vectorizer = TfidfVectorizer(max_df=0.95,
-                                 min_df=0, stop_words='english',
+                                 min_df=0, stop_words='english', strip_accents="ascii", smooth_idf=True,
                                  use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
     vector = vectorizer.fit_transform(tweetArray)
@@ -231,6 +237,7 @@ else:
 
 print("matrix created")
 print(linkage_matrix)
+
 
 fig, ax = plt.subplots(figsize=(30, 40)) # set size
 ax = dendrogram(linkage_matrix, truncate_mode="level", p=25, orientation="right", labels=tweetArray);
