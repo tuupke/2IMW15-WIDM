@@ -121,6 +121,8 @@ if not my_file.is_file():
                 continue
             if filtered.find('if') != -1:
                 continue
+            if len(filtered.split()) < 3:
+                continue
 
             tweetArray.append(filtered)
 
@@ -129,37 +131,12 @@ if not my_file.is_file():
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
 
-
-    def get_language_likelihood(input_text):
-        """Return a dictionary of languages and their likelihood of being the
-        natural language of the input text
-        """
-
-        input_text = input_text.lower()
-        input_words = nltk.wordpunct_tokenize(input_text)
-
-        language_likelihood = {}
-        total_matches = 0
-        for language in nltk.stopwords._fileids:
-            language_likelihood[language] = len(set(input_words) &
-                                                set(nltk.stopwords.words(language)))
-
-        return language_likelihood
-
-
-    def get_language(input_text):
-        """Return the most likely language of the given text
-        """
-
-        likelihoods = get_language_likelihood(input_text)
-        return sorted(likelihoods, key=likelihoods.get, reverse=True)[0]
-
     for line in tweetArray:
         lowertext = line.lower()
         tokens = nltk.pos_tag(nltk.word_tokenize(line))
         print(line)
-        print(tokens)
-        print(tokens[0][0])
+        #print(tokens)
+        #rint(tokens[0][0])
         try:
             if(ld.detect(lowertext)!= "en"):
                     wrong.append(line)
