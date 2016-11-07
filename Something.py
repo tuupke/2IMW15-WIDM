@@ -14,6 +14,7 @@ from scipy.cluster.hierarchy import fcluster
 
 
 tweetArray = []
+rawTweets = []
 
 my_file = Path("tweets.pkl")
 if not my_file.is_file():
@@ -128,20 +129,15 @@ for tweet in cursor.fetchall():
             if len(filtered.split()) < 3:
                 continue
 
+            rawTweets.append(tweet)
             tweetArray.append(filtered)
-        better.append(tweet)
 
-    print('Total: ', len(better))
     print('Question: ', len(tweetArray))
 
     print("starting sentiment analysis")
 
-
-    print(len(tweetArray))
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
-
-    sum = 0
 
     for line in tweetArray:
         lowertext = line.lower()
@@ -150,7 +146,7 @@ for tweet in cursor.fetchall():
             if(ld.detect(lowertext)!= "en"):
                     wrong.append(line)
         except ld.lang_detect_exception.LangDetectException:
-            print(line)
+            wrong.append(line)
         verb = False
         for type in tokens:
             if type[1].startswith('V'):
@@ -159,7 +155,6 @@ for tweet in cursor.fetchall():
             wrong.append(line)
         elif tokens[0][0].lower() in auxiliary:
             wrong.append(line)
-            sum = sum + 1
         elif any(state in lowertext for state in statement):
             continue
         elif any(emotion in lowertext for emotion in sentiment):
@@ -167,17 +162,10 @@ for tweet in cursor.fetchall():
         #removing tags that start with a verb (question removal)
 
     tweetArray = [x for x in tweetArray if x not in wrong]
-
-
-    for tweet in tweetArray[:100]:
-        print(tweet)
-    print(len(tweetArray))
-    print(sum)
-    del tweetArray[171]
-    print()
     joblib.dump(tweetArray, 'tweets.pkl')
 else:
     tweetArray = joblib.load('tweets.pkl')
+
 print("tweetsread")
 
 #preparing for clustering
@@ -205,56 +193,31 @@ def tokenize_only(text):
             filtered_tokens.append(token)
     return filtered_tokens
 
-# Select only tweet texts from the tweetarray
-tweetTexts = [row[1] for row in tweetArray]
-
 vector = []
 my_file = Path("vector.pkl")
-my_file2 = Path("names.pkl")
-if not my_file.is_file() or not my_file2.is_file():
+if not my_file.is_file():
     vectorizer = TfidfVectorizer(max_df=0.95,
                                  min_df=0, stop_words='english', strip_accents="ascii", smooth_idf=True,
                                  use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
     vector = vectorizer.fit_transform(tweetArray)
-    names = vectorizer.get_feature_names()
     joblib.dump(vector, 'vector.pkl')
-    joblib.dump(names, 'names.pkl')
 else:
     vector = joblib.load('vector.pkl')
-    names = joblib.load('names.pkl')
 
 print("vectorized")
 
-#num_clusters = 5
-#
-#km = KMeans(n_clusters=num_clusters)
-#
-#km.fit(vector)
-#
-#clusters = km.labels_.tolist()
-#print("cluster 0: ", clusters.count(0))
-#print("cluster 1: ", clusters.count(1))
-#print("cluster 2: ", clusters.count(2))
-#print("cluster 3: ", clusters.count(3))
-#print("cluster 4: ", clusters.count(4))
-#
-#for i in range(0, len(clusters)):
-#    if clusters[i] == 1:
-#        print(tweetArray[i])
 
 my_file = Path("linkageMatrix.pkl")
 if not my_file.is_file():
     dist = 1 - cosine_similarity(vector)
-    linkage_matrix = linkage(dist, method='single', metric='euclidean')
-    #linkage_matrix = ward(dist) #define the linkage_matrix using ward clustering pre-computed distance
+    linkage_matrix = linkage(dist, method='complete', metric='euclidean')
     joblib.dump(linkage_matrix, 'linkageMatrix.pkl')
 else:
     linkage_matrix = joblib.load('linkageMatrix.pkl')
 
 
 print("matrix created")
-print(linkage_matrix)
 
 
 fig, ax = plt.subplots(figsize=(30, 40)) # set size
@@ -270,7 +233,7 @@ plt.tick_params(\
 plt.tight_layout() #show plot with tight layout
 
 #uncomment below to save figure
-plt.savefig('ward_clusters.png', dpi=200) #save figure as ward_clusters
+plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
 
-array = fcluster(linkage_matrix, 0.2)
-print (array)
+clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
+print (clusterOrderning)
