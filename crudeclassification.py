@@ -2,6 +2,8 @@ from enum import Enum
 import pymysql
 from sklearn.externals import joblib
 from pathlib import Path
+from datastructures import *
+
 
 pymysql.install_as_MySQLdb()
 #################
@@ -10,44 +12,7 @@ cnx = pymysql.connect(user='chiara', passwd='',
              host='131.155.69.222', db='wirdm', charset="utf8mb4")
 cursor = cnx.cursor()
 
-#################
-#<dummy classes>
 
-class Author:
-	def __init__(self, name, account_created, verified, followers, followees, reliability):
-		self.name = name
-		self.account_created = account_created
-		self.verified = verified
-		self.followers = followers
-		self.followees = followees
-		self.reliability = reliability
-
-class Tweet:
-	def __init__(self, author, text, statement, time, favCount, retCount):
-		self.author          = author
-		self.text            = text
-		self.statement       = statement
-		self.time            = time
-		self.favCount        = favCount
-		self.retCount        = retCount
-
-class Cluster:
-	authors = None
-	tweets  = None
-	
-	def __init__(self, tweets):
-		self.tweets = tweets
-	
-	def getAuthors(self):
-		if self.authors == None:
-			self.authors = {}
-			for tweet in self.tweets:
-				self.authors[tweet.author.name] = tweet.author
-		
-		return authors.values()
-	
-	def sortTweets(self):
-		self.tweets.sort(lambda tweet : tweet.time)
 
 #</dummy classes>
 ##################
@@ -105,6 +70,19 @@ if not cluster_file.is_file():
 	joblib.dump(cluster_list, 'cluster_collection.pkl')
 else:
 	cluster_list = joblib.load('cluster_collection.pkl')
+
+feature_file = Path("cluster_features.pkl")
+if not feature_file.is_file():
+	from features import generate_features
+	cluster_features = []
+	for cluster in cluster_list:
+		cluster_features.append(generate_features(cluster.tweets))
+	joblib.dump(cluster_features, 'cluster_features.pkl')
+else:
+	cluster_features = joblib.load('cluster_features.pkl')
+
+for feat in cluster_features:
+	print(feat)
 
 # returns a list, the ith value in the list corresponds to
 # the value of func given tweets up to start+i*interval (timestamp)
