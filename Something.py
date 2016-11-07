@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
 import pymysql
-import random
+from numpy import bincount
 
 pymysql.install_as_MySQLdb()
 tweetArray = []
@@ -18,7 +18,7 @@ rawTweets = []
 
 my_file = Path("tweets.pkl")
 if not my_file.is_file():
-    cnx = MySQLdb.connect(user='chiara', passwd='',
+    cnx = pymysql.connect(user='chiara', passwd='',
                  host='131.155.69.222', db='wirdm', charset="utf8mb4")
 
     cursor = cnx.cursor()
@@ -91,11 +91,6 @@ if not my_file.is_file():
     for i in vulgair:
         if i not in sentiment:
             sentiment.append(i)
-
-
-    #this is the random picked sample set of the data
-    with open('testfile.txt','r') as f:
-        thefile = f.read().splitlines()
 
     sentiment = [x for x in sentiment if x not in verb_noun]
 
@@ -230,9 +225,5 @@ plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
 clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
 joblib.dump(clusterOrderning, 'clusterList.pkl')
 print (clusterOrderning)
-plt.savefig('euclidean complete.png', dpi=200) #save figure as ward_clusters
-
-array = fcluster(linkage_matrix, max(linkage_matrix[:, 2]) * 0.7, criterion="distance")
 print(max(linkage_matrix[:, 2]) * 0.7)
-print(bincount(array))
-print (array)
+print(bincount(clusterOrderning))
