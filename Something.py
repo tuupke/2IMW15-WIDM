@@ -88,11 +88,9 @@ if not my_file.is_file():
 
     print(len(vulgair))
 
-    #for i in vulgair:
-     #   if i not in sentiment:
-      #      sentiment.append(i)
+for tweet in cursor.fetchall():
 
-    print(len(sentiment))
+    tweet = row[1]
 
     sentiment = [x for x in sentiment if x not in verb_noun]
 
@@ -207,6 +205,8 @@ def tokenize_only(text):
             filtered_tokens.append(token)
     return filtered_tokens
 
+# Select only tweet texts from the tweetarray
+tweetTexts = [row[1] for row in tweetArray]
 
 vector = []
 my_file = Path("vector.pkl")
