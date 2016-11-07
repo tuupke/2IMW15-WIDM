@@ -79,16 +79,20 @@ if not my_file.is_file():
     "will","won't",
     "would","wouldn't"]
 
-    statement = ["says","saying","said","claims","claimed","claiming","promising","explaining"
+    statement = ["says","saying","said","claims","claimed","claiming","promising","explaining","say",
                  "stated","it is the case","promises","promised","explains","explained","claim","admit","admitted","agree",
                  "agreeing","agrees","agreed","reply","replies","replied"]
 
     #preparing the sentiment set
-    sentiment = positive + negative + emoticons
+    sentiment = positive + negative+ emoticons
 
-    for i in vulgair:
-        if i not in sentiment:
-            sentiment.append(i)
+    print(len(vulgair))
+
+    #for i in vulgair:
+     #   if i not in sentiment:
+      #      sentiment.append(i)
+
+    print(len(sentiment))
 
     sentiment = [x for x in sentiment if x not in verb_noun]
 
@@ -123,14 +127,14 @@ if not my_file.is_file():
                 continue
             if filtered.find('if') != -1:
                 continue
-            if len(filtered.split()) < 1:
+            if len(filtered.split()) < 3:
                 continue
 
             tweetArray.append(filtered)
         better.append(tweet)
 
-    for tweet in tweetArray[:100]:
-        print(tweet)
+    print('Total: ', len(better))
+    print('Question: ', len(tweetArray))
 
     print("starting sentiment analysis")
 
@@ -139,18 +143,25 @@ if not my_file.is_file():
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
 
+    sum = 0
+
     for line in tweetArray:
         lowertext = line.lower()
         tokens = nltk.pos_tag(nltk.word_tokenize(line))
-        #print(tokens)
-        #rint(tokens[0][0])
         try:
             if(ld.detect(lowertext)!= "en"):
                     wrong.append(line)
         except ld.lang_detect_exception.LangDetectException:
             print(line)
-        if tokens[0][0].lower() in auxiliary:
+        verb = False
+        for type in tokens:
+            if type[1].startswith('V'):
+                verb = True
+        if(verb==False):
             wrong.append(line)
+        elif tokens[0][0].lower() in auxiliary:
+            wrong.append(line)
+            sum = sum + 1
         elif any(state in lowertext for state in statement):
             continue
         elif any(emotion in lowertext for emotion in sentiment):
@@ -158,7 +169,14 @@ if not my_file.is_file():
         #removing tags that start with a verb (question removal)
 
     tweetArray = [x for x in tweetArray if x not in wrong]
+
+
+    for tweet in tweetArray[:100]:
+        print(tweet)
+    print(len(tweetArray))
+    print(sum)
     del tweetArray[171]
+    print()
     joblib.dump(tweetArray, 'tweets.pkl')
 else:
     tweetArray = joblib.load('tweets.pkl')
