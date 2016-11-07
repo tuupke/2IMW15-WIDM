@@ -24,7 +24,6 @@ def generate_features(tweets):
     results.append(word_complexity_feature(tok_statements))
     results.append(sentence_complexity_feature(tok_statements))
     results.append(role_feature(tweets))
-    results.append(engagement_feature(tweets))
     return results
 
 def get_vulgar_words():
@@ -43,7 +42,6 @@ def get_abbreviations():
 
 def negated_feature(tok_tweets):
     negated = 0
-    nnegated = 0
     for tok_tweet in tok_tweets:
         if (nltk.sentiment.vader.negated(tok_tweet)):
             negated += 1
@@ -144,38 +142,5 @@ def role_feature(tweets_class):
     if count == 0:
         return 1
     return count/role_fraction_count
-
-def engagement_feature(tweets_class):
-    role_fraction_count = 0
-    count = 0
-    for tweet in tweets_class:
-        role_fraction_count += tweet.author.followers/tweet.author.folowees
-        count += 1
-    if count == 0:
-        return 1
-    return count/role_fraction_count
     
-    
-
 tweets = ["Hi this is an american asshole test", "Hi irl this isn't a test", "The quick brown fox jumps over the lazy dog. I burned dinner because I was watching The Walking Dead, but not the cake because I started paying attention to the oven timer when I smelled smoke."]
-tok_tweets = []
-for tweet in tweets:
-    tok_tweets.append(nltk.word_tokenize(tweet))
-
-vulgar = get_vulgar_words()
-abbreviation = get_abbreviations()
-
-print("\n\n\n\n")
-print(negated_feature(tok_tweets))
-
-print("\n\n\n\n")
-print(vulgar_feature(tok_tweets, vulgar))
-
-print("\n\n\n\n")
-print(abbreviation_feature(tok_tweets, abbreviation))
-
-print("\n\n\n\n")
-print(word_complexity_feature(tok_tweets))
-
-print("\n\n\n\n")
-print(sentence_complexity_feature(tweets))

@@ -1,10 +1,13 @@
 from enum import Enum
-import MySQLdb
+import pymysql
+import Something
+import pymysql
 
+pymysql.install_as_MySQLdb()
 #################
 #<database connection>
-cnx = MySQLdb.connect(user='root', passwd='',
-             host='127.0.0.1', db='wirdm', charset="utf8mb4")
+cnx = pymysql.connect(user='chiara', passwd='nCLNb5vJASMrMv7E',
+             host='131.155.69.222', db='wirdm', charset="utf8mb4")
 cursor = cnx.cursor()
 
 #################
@@ -21,10 +24,10 @@ class Author:
 
 	def getReliabilityScore(username):
 		sql = "select COMPUTED/max(COMPUTED) from users where username=%s"
-    		cursor.execute(sql, (username, ))
-    		if cursor.rowcount != 1:
-        		return 1;
-    		return cursor.fetchone()[0]
+		cursor.execute(sql, (username, ))
+		if cursor.rowcount != 1:
+			return 1;
+		return cursor.fetchone()[0]
 
 class Tweet:
 	def __init__(self, author, text, statement, time, favCount, retCount):
