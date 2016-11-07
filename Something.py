@@ -2,10 +2,9 @@ import csv
 import nltk
 from sklearn.feature_extraction.text import *
 import re
-from sklearn.cluster import *
 from sklearn.externals import joblib
 from sklearn.metrics.pairwise import cosine_similarity
-from scipy.cluster.hierarchy import linkage, ward, dendrogram
+from scipy.cluster.hierarchy import linkage, dendrogram
 import langdetect as ld
 import matplotlib.pyplot as plt
 from pathlib import Path
@@ -101,6 +100,7 @@ if not my_file.is_file():
     sentiment = [x for x in sentiment if x not in verb_noun]
 
     cursor.execute("select * from tweets")
+    rawTweets = [];
 
 
     for row in cursor.fetchall():
@@ -109,7 +109,7 @@ if not my_file.is_file():
 
         if tweet.find('?') == -1:
 
-            filtered = re.sub("(^(((\"|'|\s+)?RT:?\s*)))|(http[^\s]+)|(@[^\s]+\s?)|#", "", tweet).lower()
+            filtered = re.sub("(^((\"|'|\s+)?RT:?\s*))|(http[^\s]+)|(@[^\s]+\s?)|#", "", tweet).lower()
 
            #filter out question words
             if filtered.find('what') != -1:
@@ -164,6 +164,7 @@ if not my_file.is_file():
     joblib.dump(rawTweets, 'rawTweets.pkl')
 else:
     tweetArray = joblib.load('tweets.pkl')
+    rawTweets = joblib.load('rawTweets.pkl')
 
 print("tweetsread")
 
@@ -219,16 +220,8 @@ else:
 print("matrix created")
 
 
-fig, ax = plt.subplots(figsize=(30, 40)) # set size
-ax = dendrogram(linkage_matrix, truncate_mode="level", p=25, orientation="right", labels=tweetArray);
-
-plt.tick_params(\
-    axis= 'x',          # changes apply to the x-axis
-    which='both',      # both major and minor ticks are affected
-    bottom='off',      # ticks along the bottom edge are off
-    top='off',         # ticks along the top edge are off
-    labelbottom='off')
-
+fig, ax = plt.subplots(figsize=(60, 80)) # set size
+ax = dendrogram(linkage_matrix, show_leaf_counts=True, truncate_mode="level", p=20, orientation="right", labels=rawTweets);
 plt.tight_layout() #show plot with tight layout
 
 #uncomment below to save figure
@@ -237,3 +230,9 @@ plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
 clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
 joblib.dump(clusterOrderning, 'clusterList.pkl')
 print (clusterOrderning)
+plt.savefig('euclidean complete.png', dpi=200) #save figure as ward_clusters
+
+array = fcluster(linkage_matrix, max(linkage_matrix[:, 2]) * 0.7, criterion="distance")
+print(max(linkage_matrix[:, 2]) * 0.7)
+print(bincount(array))
+print (array)
