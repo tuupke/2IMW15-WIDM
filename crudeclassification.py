@@ -1,12 +1,12 @@
 from enum import Enum
 import pymysql
-import Something
-import pymysql
+from sklearn.externals import joblib
+from pathlib import Path
 
 pymysql.install_as_MySQLdb()
 #################
 #<database connection>
-cnx = pymysql.connect(user='chiara', passwd='nCLNb5vJASMrMv7E',
+cnx = pymysql.connect(user='chiara', passwd='',
              host='131.155.69.222', db='wirdm', charset="utf8mb4")
 cursor = cnx.cursor()
 
@@ -14,20 +14,13 @@ cursor = cnx.cursor()
 #<dummy classes>
 
 class Author:
-	def __init__(self, name, account_created, verified, followers, folowees, reliability):
+	def __init__(self, name, account_created, verified, followers, followees, reliability):
 		self.name = name
 		self.account_created = account_created
 		self.verified = verified
 		self.followers = followers
-		self.folowees = folowees
-		self.reliability = self.getReliabilityScore(name)
-
-	def getReliabilityScore(username):
-		sql = "select COMPUTED/max(COMPUTED) from users where username=%s"
-		cursor.execute(sql, (username, ))
-		if cursor.rowcount != 1:
-			return 1;
-		return cursor.fetchone()[0]
+		self.followees = followees
+		self.reliability = reliability
 
 class Tweet:
 	def __init__(self, author, text, statement, time, favCount, retCount):
@@ -49,9 +42,9 @@ class Cluster:
 		if self.authors == None:
 			self.authors = {}
 			for tweet in self.tweets:
-				self.authors.add(tweet.author)
+				self.authors[tweet.author.name] = tweet.author
 		
-		return authors
+		return authors.values()
 	
 	def sortTweets(self):
 		self.tweets.sort(lambda tweet : tweet.time)
@@ -60,39 +53,58 @@ class Cluster:
 ##################
 #<helper classes>
 
-class ClusterCollection:
-	def __init__(self, clusterIDs):
-		self.clusterIDs = clusterIDs
-	
-	def __iter__(self):
-		return self
-	
-	def size(self):
-		return len(self.clusterIDs)
-	
-	def get(self, index):
-		clusterID = self.clusterIDs[index]
-		return self.loadCluster(clusterID)
-	
-	def loadCluster(self, clusterID):
-		# some database stuff
-		# return collection of Tweet objects
-		return []
+def create_author(name):
+	sql = "select id,verified,created_at,COMPUTED/max(COMPUTED) from users where username=%s"
+	cursor.execute(sql, (name, ))
+	if cursor.rowcount != 1:
+		print("error")
+		raise
+	results = cursor.fetchone()
+	sql = "select count from follow_counts where follower_id=%s"
+	cursor.execute(sql, (results[0], ))
+	if cursor.rowcount != 1:
+		followees = 0
+	else:
+		followees = cursor.fetchone()[0]
+	sql = "select count from follower_counts where follower_id=%s"
+	cursor.execute(sql, (results[0], ))
+	if cursor.rowcount != 1:
+		followers = 0
+	else:
+		followers = cursor.fetchone()[0]
+	return Author(name, results[2], results[1], followers, followees, results[3]) 
 
-class ClustercollectionIterator:
-	current = 0
-	
-	def __init__(self, clusterCollection):
-		self.clusterCollection = clusterCollection
-	
-	def __iter__(self):
-		return self
-	
-	def __next__(self):
-		if self.clusterCollection.size() > self.current:
-			return self.clusterCollection.get(self.current)
-		else:
-			raise StopIteration
+cluster_file = Path("cluster_collection.pkl")
+if not cluster_file.is_file():
+
+	tweetMatrix = joblib.load('rawTweets.pkl')
+	sentences = joblib.load('tweets.pkl')
+	clusterAssignments = joblib.load('clusterList.pkl')
+
+	print("len: ", len(sentences))
+
+	authors = {}
+	tweets = []
+	clusters = {}
+
+	count = 0
+	for (tweet, sentence, cluster_id) in zip(tweetMatrix, sentences, clusterAssignments):
+		print("count", count)
+		count += 1
+		if not tweet[4] in authors:
+			authors[tweet[4]] = create_author(tweet[4])
+		tweet_class = Tweet(authors[tweet[4]], tweet[1], sentence, tweet[5], tweet[3], tweet[2])
+		if not cluster_id in clusters:
+			clusters[cluster_id] = []
+		clusters[cluster_id].append(tweet_class)
+	print(len(clusters))
+	cluster_list = []
+	for cid,tweets in clusters.items():
+		cluster_list.append(Cluster(tweets))
+
+	joblib.dump(cluster_list, 'cluster_collection.pkl')
+else:
+	cluster_list = joblib.load('cluster_collection.pkl')
 
 # returns a list, the ith value in the list corresponds to
 # the value of func given tweets up to start+i*interval (timestamp)

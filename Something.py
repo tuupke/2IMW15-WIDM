@@ -2,7 +2,6 @@ import csv
 import nltk
 from sklearn.feature_extraction.text import *
 import re
-import MySQLdb
 from sklearn.cluster import *
 from sklearn.externals import joblib
 from sklearn.metrics.pairwise import cosine_similarity
@@ -11,9 +10,10 @@ import langdetect as ld
 import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
+import pymysql
 import random
 
-
+pymysql.install_as_MySQLdb()
 tweetArray = []
 rawTweets = []
 
@@ -131,7 +131,7 @@ if not my_file.is_file():
             if len(filtered.split()) < 3:
                 continue
 
-            rawTweets.append(tweet)
+            rawTweets.append(row)
             tweetArray.append(filtered)
 
     print('Question: ', len(tweetArray))
@@ -141,25 +141,27 @@ if not my_file.is_file():
     #removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
 
-    for line in tweetArray:
+    for i,line in enumerate(tweetArray):
         lowertext = line.lower()
         #tokens = nltk.pos_tag(nltk.word_tokenize(line))
         try:
             if(ld.detect(lowertext)!= "en"):
-                    wrong.append(line)
+                    wrong.append(i)
         except ld.lang_detect_exception.LangDetectException:
-            wrong.append(line)
+            wrong.append(i)
         verb = False
         if tokens[0][0].lower() in auxiliary:
             wrong.append(line)
         elif any(state in lowertext for state in statement):
             continue
         elif any(emotion in lowertext for emotion in sentiment):
-            wrong.append(line)
+            wrong.append(i)
         #removing tags that start with a verb (question removal)
 
-    tweetArray = [x for x in tweetArray if x not in wrong]
+    tweetArray = [x for i,x in enumerate(tweetArray) if i not in wrong]
+    rawTweets = [x for i,x in enumerate(rawTweets) if i not in wrong]
     joblib.dump(tweetArray, 'tweets.pkl')
+    joblib.dump(rawTweets, 'rawTweets.pkl')
 else:
     tweetArray = joblib.load('tweets.pkl')
 
@@ -233,4 +235,5 @@ plt.tight_layout() #show plot with tight layout
 plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
 
 clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
+joblib.dump(clusterOrderning, 'clusterList.pkl')
 print (clusterOrderning)
