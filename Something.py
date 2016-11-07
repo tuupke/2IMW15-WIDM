@@ -11,6 +11,7 @@ import langdetect as ld
 import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
+import random
 
 
 tweetArray = []
@@ -87,17 +88,20 @@ if not my_file.is_file():
     #preparing the sentiment set
     sentiment = positive + negative+ emoticons
 
-    print(len(vulgair))
 
-for tweet in cursor.fetchall():
+    for i in vulgair:
+        if i not in sentiment:
+            sentiment.append(i)
 
-    tweet = row[1]
+
+    #this is the random picked sample set of the data
+    with open('testfile.txt','r') as f:
+        thefile = f.read().splitlines()
 
     sentiment = [x for x in sentiment if x not in verb_noun]
 
     cursor.execute("select * from tweets")
 
-    better = []
 
     for row in cursor.fetchall():
 
@@ -120,12 +124,10 @@ for tweet in cursor.fetchall():
                 continue
             if filtered.find('who') != -1:
                 continue
-            if filtered.find('which') != -1:
-                continue
             if filtered.find('whether') != -1:
                 continue
             if filtered.find('if') != -1:
-                continue
+                 continue
             if len(filtered.split()) < 3:
                 continue
 
@@ -141,19 +143,14 @@ for tweet in cursor.fetchall():
 
     for line in tweetArray:
         lowertext = line.lower()
-        tokens = nltk.pos_tag(nltk.word_tokenize(line))
+        #tokens = nltk.pos_tag(nltk.word_tokenize(line))
         try:
             if(ld.detect(lowertext)!= "en"):
                     wrong.append(line)
         except ld.lang_detect_exception.LangDetectException:
             wrong.append(line)
         verb = False
-        for type in tokens:
-            if type[1].startswith('V'):
-                verb = True
-        if(verb==False):
-            wrong.append(line)
-        elif tokens[0][0].lower() in auxiliary:
+        if tokens[0][0].lower() in auxiliary:
             wrong.append(line)
         elif any(state in lowertext for state in statement):
             continue
