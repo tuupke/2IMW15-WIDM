@@ -152,5 +152,3 @@ def generate_features(tweets):
     results.append(influence_feature(tweets))
     results.append(role_feature(tweets))
     return results
-    
-tweets = ["Hi this is an american asshole test", "Hi irl this isn't a test", "The quick brown fox jumps over the lazy dog. I burned dinner because I was watching The Walking Dead, but not the cake because I started paying attention to the oven timer when I smelled smoke."]
