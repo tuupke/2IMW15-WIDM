@@ -3,6 +3,7 @@ import pymysql
 from sklearn.externals import joblib
 from pathlib import Path
 from datastructures import *
+from decisiontree import *
 
 
 pymysql.install_as_MySQLdb()
@@ -77,6 +78,9 @@ else:
 for feat in cluster_features:
 	print(feat)
 
+for index, cluster in enumerate(cluster_list):
+	cluster.features = cluster_features[index]
+
 print(len(cluster_list))
 
 # returns a list, the ith value in the list corresponds to
@@ -103,13 +107,13 @@ def calculateTimeSeries(sortedTweets, interval, func):
 
 #config:
 minReliableAuthors = 1
-minTotalReliability = 0.008*minReliableAuthors
+minTotalReliability = 0.004*minReliableAuthors
+unreliability = 0.001*minReliableAuthors
 
 def calculateClusterReliability(cluster, threshold):
 	state = {}
 	for tweet in cluster.tweets:
 		value, state = calculateClusterReliability_stream(tweet, state)
-		print(state)
 		if value >= threshold:
 			return value
 	
@@ -179,12 +183,12 @@ class CrudeClassifier:
 		
 	def confirmedTest(self, cluster):
 		rel = calculateClusterReliability(cluster, threshold=minTotalReliability)
-		print(rel)
 		return minTotalReliability < rel
 	
 	def deniedTest(self, cluster):
 		# as of yet, we have no way to conclude that the cluster should be classified as 'denied'
-		return False
+		rel = calculateClusterReliability(cluster, threshold=minTotalReliability)
+		return rel < unreliability
 	
 	def analizeConfirmed(self, cluster):
 		# this cluster was classified as confirmed
@@ -200,11 +204,40 @@ class CrudeClassifier:
 		# in the curves that can be used
 		pass
 
-#cc = CrudeClassifier()
-#result = cc.classify(cluster_list)
+cc = CrudeClassifier()
+result = cc.classify(cluster_list)
 
-#tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
-#for r in result.values():
-#	tally[r] += 1
+tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
+for r in result.values():
+	tally[r] += 1
 
-#print(tally)
+print(tally)
+
+labels = []
+labeled = []
+unlabeled = []
+unlabeled_clusters = []
+for cluster, cclass in result.items():
+	if not cclass == ClusterClass.unclassified:
+		labels.append(cclass == ClusterClass.confirmed)
+		labeled.append(cluster.features)
+	else:
+		unlabeled.append(cluster.features)
+		unlabeled_clusters.append(cluster)
+classifier = DecisionTreeClassifier()
+classifier.train(labeled, labels)
+classifier.toDotFile()
+predicted = classifier.classifyAll(unlabeled)
+
+for index, sample in enumerate(unlabeled_clusters):
+	if predicted[index]:
+		result[sample] = ClusterClass.confirmed
+	else:
+		result[sample] = ClusterClass.denied
+
+
+tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
+for r in result.values():
+	tally[r] += 1
+
+print(tally)

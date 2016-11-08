@@ -22,6 +22,7 @@ class Tweet:
 class Cluster:
 	authors = None
 	tweets  = None
+	features = None
 	
 	def __init__(self, tweets):
 		self.tweets = tweets
