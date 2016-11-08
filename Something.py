@@ -11,6 +11,8 @@ from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
 import pymysql
 from numpy import bincount
+from numpy import argmax
+from numpy import rot90
 
 pymysql.install_as_MySQLdb()
 tweetArray = []
@@ -188,14 +190,27 @@ def tokenize_only(text):
             filtered_tokens.append(token)
     return filtered_tokens
 
-vector = []
-my_file = Path("vector.pkl")
-if not my_file.is_file():
+def vectorize_tweet_set(tweetArray):
     vectorizer = TfidfVectorizer(max_df=0.95,
                                  min_df=0, stop_words='english', strip_accents="ascii", smooth_idf=True,
                                  use_idf=True, tokenizer=tokenize_and_stem, ngram_range=(1, 3))
 
-    vector = vectorizer.fit_transform(tweetArray)
+    return vectorizer.fit_transform(tweetArray)
+
+def make_linkage_matrix(vector):
+    dist = 1 - cosine_similarity(vector)
+    return linkage(dist, method='complete', metric='euclidean')
+
+def make_dendrogram(linkage_matrix, threshold, name):
+    fig, ax = plt.subplots(figsize=(10, 20))  # set size
+    ax = dendrogram(linkage_matrix, show_leaf_counts=True, color_threshold=threshold,
+                    truncate_mode="level", p=30, orientation="right", labels=rot90(rawTweets)[5], leaf_font_size=4);
+    plt.savefig(name + '.png', dpi=300, bbox_inches='tight')  # save figure as ward_clusters
+
+vector = []
+my_file = Path("vector.pkl")
+if not my_file.is_file():
+    vector = vectorize_tweet_set(tweetArray)
     joblib.dump(vector, 'vector.pkl')
 else:
     vector = joblib.load('vector.pkl')
@@ -205,8 +220,7 @@ print("vectorized")
 
 my_file = Path("linkageMatrix.pkl")
 if not my_file.is_file():
-    dist = 1 - cosine_similarity(vector)
-    linkage_matrix = linkage(dist, method='complete', metric='euclidean')
+    linkage_matrix = make_linkage_matrix(vector)
     joblib.dump(linkage_matrix, 'linkageMatrix.pkl')
 else:
     linkage_matrix = joblib.load('linkageMatrix.pkl')
@@ -214,16 +228,52 @@ else:
 
 print("matrix created")
 
+topThreshold = 0.2* max(linkage_matrix[:,2])
+make_dendrogram(linkage_matrix, topThreshold, "topDendrogram")
+clusterOrderning = fcluster(linkage_matrix, topThreshold, criterion="distance")
 
-fig, ax = plt.subplots(figsize=(60, 80)) # set size
-ax = dendrogram(linkage_matrix, show_leaf_counts=True, truncate_mode="level", p=20, orientation="right", labels=rawTweets);
-plt.tight_layout() #show plot with tight layout
+originalCount = bincount(clusterOrderning)
+print("amount of clusters: ", len(originalCount)-1, " amount in each: ", originalCount)
 
-#uncomment below to save figure
-plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
+clusterToFind = argmax(originalCount)
+print("find cluster: ", clusterToFind)
 
-clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
+newTweets = []
+newRawTweets = []
+for id, val in enumerate(clusterOrderning):
+    if val == clusterToFind:
+        newTweets.append(tweetArray[id])
+        newRawTweets.append(rawTweets[id])
+
+newVector = vectorize_tweet_set(newTweets)
+newLinkage = make_linkage_matrix(newVector)
+
+bottomThreshold = 0.50* max(newLinkage[:,2])
+make_dendrogram(newLinkage, bottomThreshold, "bottomDendrogram")
+detailedClustering = fcluster(newLinkage, bottomThreshold, criterion="distance")
+
+count = bincount(detailedClustering)
+print("amount of detailed clusters: ", len(count)-1, " amount in each: ", count)
+
+numberOfOriginalClusters = len(originalCount)-1
+i = 0;
+for id, val in enumerate(clusterOrderning):
+    if val == clusterToFind:
+        clusterOrderning[id] = detailedClustering[i] + numberOfOriginalClusters
+        i += 1
+
+for id, val in enumerate(clusterOrderning):
+    if val>clusterToFind:
+        clusterOrderning[id] = val - 1
+
+clusterToFind = argmax(count)
+for id, val in enumerate(clusterOrderning):
+    if val == clusterToFind:
+        clusterOrderning[id] = 0
+    elif val>clusterToFind:
+        clusterOrderning[id] = val -1
+
+count = bincount(clusterOrderning)
+print("amount of clusters total: ", len(count), " amount in each: ", count)
+
 joblib.dump(clusterOrderning, 'clusterList.pkl')
-print (clusterOrderning)
-print(max(linkage_matrix[:, 2]) * 0.7)
-print(bincount(clusterOrderning))
