@@ -63,7 +63,7 @@ class DecisionTreeClassifier:
 		self.clf = self.clf.fit(samples, labels)
 	
 	def classifyAll(self, samples):
-		return treeClassifyAll(self.clf, samples, 10)
+		return treeClassifyAll(self.clf, samples, 5)
 	
 	def toDotFile(self):
 		with open("tree.dot", 'w') as f:

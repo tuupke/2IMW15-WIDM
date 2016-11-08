@@ -33,7 +33,7 @@ class Cluster:
 			for tweet in self.tweets:
 				self.authors[tweet.author.name] = tweet.author
 		
-		return authors.values()
+		return self.authors.values()
 	
 	def sortTweets(self):
 		self.tweets.sort(key=lambda tweet : tweet.time)

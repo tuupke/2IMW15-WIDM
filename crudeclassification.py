@@ -23,7 +23,7 @@ def create_author(name):
 	sql = "select id,verified,created_at,COMPUTED/(select max(COMPUTED) from users),follower_count,friend_count from users where username=%s"
 	cursor.execute(sql, (name, ))
 	if cursor.rowcount != 1:
-		result = (0, 0, 0, 0, 0, 0)
+		results = (0, 0, 0, 0, 0, 0)
 	else:
 		results = cursor.fetchone()
 	return Author(name, results[2], results[1], results[4], results[5], results[3]) 
@@ -76,8 +76,7 @@ else:
 	cluster_features = joblib.load('cluster_features.pkl')
 
 for feat in cluster_features:
-	print(feat)
-
+	del feat[5]
 for index, cluster in enumerate(cluster_list):
 	cluster.features = cluster_features[index]
 
@@ -106,9 +105,9 @@ def calculateTimeSeries(sortedTweets, interval, func):
 	
 
 #config:
-minReliableAuthors = 1
-minTotalReliability = 0.004*minReliableAuthors
-unreliability = 0.001*minReliableAuthors
+minReliableAuthors = 3
+minTotalReliability = 0.4*minReliableAuthors
+unreliability = 0.2*minReliableAuthors
 
 def calculateClusterReliability(cluster, threshold):
 	state = {}
