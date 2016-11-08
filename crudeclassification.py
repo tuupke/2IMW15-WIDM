@@ -4,6 +4,7 @@ from sklearn.externals import joblib
 from pathlib import Path
 from datastructures import *
 from decisiontree import *
+from svm import *
 from random import choice
 
 
@@ -228,13 +229,17 @@ classifiers = [
 	DecisionTreeClassifier(5),
 	DecisionTreeClassifier(10),
 	DecisionTreeClassifier2(),
-	
+	SVMClassifier("linear"),
+	SVMClassifier("poly"),
+	SVMClassifier("rbf"),
+	SVMClassifier("sigmoid"),
 ]
 classifierNames = [
 	"tree-5",
 	"tree-10",
 	"tree2",
-	
+	"linear-svm",
+	"poly-svm", "rbf-svm", "sigmoid-svm"
 ]
 
 predicted = [None] * len(classifiers)
