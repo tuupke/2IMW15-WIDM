@@ -53,6 +53,10 @@ if not cluster_file.is_file():
 		clusters[cluster_id].append(tweet_class)
 	print(len(clusters))
 	cluster_list = []
+
+	# The zero cluster is the bigges, which we delete
+	del(clusters[0])
+
 	for cid,tweets in clusters.items():
 		cluster_list.append(Cluster(tweets))
 
