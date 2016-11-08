@@ -222,7 +222,7 @@ plt.tight_layout() #show plot with tight layout
 #uncomment below to save figure
 plt.savefig('Dendrogram.png', dpi=200) #save figure as ward_clusters
 
-clusterOrderning = fcluster(linkage_matrix, 0.7* max(linkage_matrix[:,2]), criterion="distance")
+clusterOrderning = fcluster(linkage_matrix, 0.2* max(linkage_matrix[:,2]), criterion="distance")
 joblib.dump(clusterOrderning, 'clusterList.pkl')
 print (clusterOrderning)
 print(max(linkage_matrix[:, 2]) * 0.7)
