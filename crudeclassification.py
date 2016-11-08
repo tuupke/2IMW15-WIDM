@@ -119,15 +119,15 @@ def calculateClusterReliability(cluster, threshold):
 
 def calculateClusterReliability_stream(tweet, state):
 	if tweet.author not in state.keys():
-		score = getReliabilityScore(tweet.author)
+		score = tweet.author.reliability
 		if len(state) < minReliableAuthors or min(state.values) < score:
-			state[auth] = score
+			state[tweet.author] = score
 			while len(state) > minReliableAuthors:
 				# list of most reliable authors is too long
 				# remove least reliable author
 				del state[min(state, key=state.get)]
 	
-	return sum(state), state
+	return sum(state.values()), state
 #</helper classes>
 ##################
 
@@ -141,7 +141,7 @@ class ClusterClass(Enum):
 
 
 # Picks out some clusters that are 'obviously' true or false, leaves the rest unclassified
-class CrudeClassifyer:
+class CrudeClassifier:
 	
 	
 	# @param clusters a set of objects of type Cluster
@@ -171,7 +171,7 @@ class CrudeClassifyer:
 		return classification
 		
 	def confirmedTest(self, cluster):
-		return minTotalReliability < self.calculateClusterReliability(cluster, threshold=minTotalReliability)
+		return minTotalReliability < calculateClusterReliability(cluster, threshold=minTotalReliability)
 	
 	def deniedTest(self, cluster):
 		# as of yet, we have no way to conclude that the cluster should be classified as 'denied'
@@ -189,3 +189,8 @@ class CrudeClassifyer:
 		# TODO: plot volume and reliability over time, hope that there's a good (combination of) features
 		# in the curves that can be used
 		pass
+
+cc = CrudeClassifier()
+result = cc.classify(cluster_list)
+
+print(result)
