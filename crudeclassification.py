@@ -19,7 +19,7 @@ cursor = cnx.cursor()
 #<helper classes>
 
 def create_author(name):
-	sql = "select id,verified,created_at,COMPUTED/max(COMPUTED),follower_count,friend_count from users where username=%s"
+	sql = "select id,verified,created_at,COMPUTED/(select max(COMPUTED) from users),follower_count,friend_count from users where username=%s"
 	cursor.execute(sql, (name, ))
 	if cursor.rowcount != 1:
 		print("error")
@@ -54,7 +54,7 @@ if not cluster_file.is_file():
 	print(len(clusters))
 	cluster_list = []
 
-	# The zero cluster is the bigges, which we delete
+	# The zero cluster is the biggest, which we delete
 	del(clusters[0])
 
 	for cid,tweets in clusters.items():
@@ -83,12 +83,14 @@ print(len(cluster_list))
 # the value of func given tweets up to start+i*interval (timestamp)
 # func accepts one tweet at a time and a state
 # func returns a pair (value, newState)
-def calculateTimeSeries(sortedTweets, start, interval, func):
+def calculateTimeSeries(sortedTweets, interval, func):
 	state = None
-	mark = start
+	mark = -1
 	result = []
 	value = None
 	for tweet in sortedTweets:
+		if mark == -1:
+			mark = tweet.time
 		if tweet.time > mark:
 			result.append(value)
 			mark += interval
@@ -100,22 +102,27 @@ def calculateTimeSeries(sortedTweets, start, interval, func):
 	
 
 #config:
-minReliableAuthors = 10
-minTotalReliability = 0.8*minReliableAuthors
+minReliableAuthors = 1
+minTotalReliability = 0.008*minReliableAuthors
 
 def calculateClusterReliability(cluster, threshold):
 	state = {}
 	for tweet in cluster.tweets:
 		value, state = calculateClusterReliability_stream(tweet, state)
+		print(state)
 		if value >= threshold:
 			return value
 	
 	return value
 
 def calculateClusterReliability_stream(tweet, state):
+	if state is None:
+		state = {}
 	if tweet.author not in state.keys():
 		score = tweet.author.reliability
-		if len(state) < minReliableAuthors or min(state.values) < score:
+		if score is None: # too small to calculate...
+			score = 0
+		if len(state) < minReliableAuthors or min(state.values()) < score:
 			state[tweet.author] = score
 			while len(state) > minReliableAuthors:
 				# list of most reliable authors is too long
@@ -123,6 +130,11 @@ def calculateClusterReliability_stream(tweet, state):
 				del state[min(state, key=state.get)]
 	
 	return sum(state.values()), state
+
+def counter_stream(tweet, state):
+	if state is None:
+		state = 0
+	return state+1, state+1
 #</helper classes>
 ##################
 
@@ -166,7 +178,9 @@ class CrudeClassifier:
 		return classification
 		
 	def confirmedTest(self, cluster):
-		return minTotalReliability < calculateClusterReliability(cluster, threshold=minTotalReliability)
+		rel = calculateClusterReliability(cluster, threshold=minTotalReliability)
+		print(rel)
+		return minTotalReliability < rel
 	
 	def deniedTest(self, cluster):
 		# as of yet, we have no way to conclude that the cluster should be classified as 'denied'
@@ -178,8 +192,9 @@ class CrudeClassifier:
 		# store what we learned in instance vars so that self.deniedTest can use the knowledge
 		
 		cluster.sortTweets()
-		volume = calculateTimeSeries(cluster, start, interval, lambda tweet, state: 1)
-		reliability = calculateTimeSeries(cluster, start, interval, calculateClusterReliability_stream)
+		interval = 1000*60*30 # 30 minutes?
+		volume = calculateTimeSeries(cluster.tweets, interval, counter_stream)
+		reliability = calculateTimeSeries(cluster.tweets, interval, calculateClusterReliability_stream)
 		
 		# TODO: plot volume and reliability over time, hope that there's a good (combination of) features
 		# in the curves that can be used
@@ -188,4 +203,8 @@ class CrudeClassifier:
 cc = CrudeClassifier()
 result = cc.classify(cluster_list)
 
-print(result)
+tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
+for r in result.values():
+	tally[r] += 1
+
+print(tally)

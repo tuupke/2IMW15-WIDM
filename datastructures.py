@@ -35,4 +35,4 @@ class Cluster:
 		return authors.values()
 	
 	def sortTweets(self):
-		self.tweets.sort(lambda tweet : tweet.time)
+		self.tweets.sort(key=lambda tweet : tweet.time)
