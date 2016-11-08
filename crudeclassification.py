@@ -19,25 +19,13 @@ cursor = cnx.cursor()
 #<helper classes>
 
 def create_author(name):
-	sql = "select id,verified,created_at,COMPUTED/max(COMPUTED) from users where username=%s"
+	sql = "select id,verified,created_at,COMPUTED/max(COMPUTED),follower_count,friend_count from users where username=%s"
 	cursor.execute(sql, (name, ))
 	if cursor.rowcount != 1:
 		print("error")
 		raise
 	results = cursor.fetchone()
-	sql = "select count from follow_counts where follower_id=%s"
-	cursor.execute(sql, (results[0], ))
-	if cursor.rowcount != 1:
-		followees = 0
-	else:
-		followees = cursor.fetchone()[0]
-	sql = "select count from follower_counts where follower_id=%s"
-	cursor.execute(sql, (results[0], ))
-	if cursor.rowcount != 1:
-		followers = 0
-	else:
-		followers = cursor.fetchone()[0]
-	return Author(name, results[2], results[1], followers, followees, results[3]) 
+	return Author(name, results[2], results[1], results[4], results[5], results[3]) 
 
 cluster_file = Path("cluster_collection.pkl")
 if not cluster_file.is_file():
@@ -46,15 +34,16 @@ if not cluster_file.is_file():
 	sentences = joblib.load('tweets.pkl')
 	clusterAssignments = joblib.load('clusterList.pkl')
 
+	print(clusterAssignments)
+
 	print("len: ", len(sentences))
 
 	authors = {}
-	tweets = []
 	clusters = {}
 
 	count = 0
 	for (tweet, sentence, cluster_id) in zip(tweetMatrix, sentences, clusterAssignments):
-		print("count", count)
+		#print("count", count)
 		count += 1
 		if not tweet[4] in authors:
 			authors[tweet[4]] = create_author(tweet[4])
@@ -83,6 +72,8 @@ else:
 
 for feat in cluster_features:
 	print(feat)
+
+print(len(cluster_list))
 
 # returns a list, the ith value in the list corresponds to
 # the value of func given tweets up to start+i*interval (timestamp)
@@ -119,15 +110,15 @@ def calculateClusterReliability(cluster, threshold):
 
 def calculateClusterReliability_stream(tweet, state):
 	if tweet.author not in state.keys():
-		score = getReliabilityScore(tweet.author)
+		score = tweet.author.reliability
 		if len(state) < minReliableAuthors or min(state.values) < score:
-			state[auth] = score
+			state[tweet.author] = score
 			while len(state) > minReliableAuthors:
 				# list of most reliable authors is too long
 				# remove least reliable author
 				del state[min(state, key=state.get)]
 	
-	return sum(state), state
+	return sum(state.values()), state
 #</helper classes>
 ##################
 
@@ -141,7 +132,7 @@ class ClusterClass(Enum):
 
 
 # Picks out some clusters that are 'obviously' true or false, leaves the rest unclassified
-class CrudeClassifyer:
+class CrudeClassifier:
 	
 	
 	# @param clusters a set of objects of type Cluster
@@ -171,7 +162,7 @@ class CrudeClassifyer:
 		return classification
 		
 	def confirmedTest(self, cluster):
-		return minTotalReliability < self.calculateClusterReliability(cluster, threshold=minTotalReliability)
+		return minTotalReliability < calculateClusterReliability(cluster, threshold=minTotalReliability)
 	
 	def deniedTest(self, cluster):
 		# as of yet, we have no way to conclude that the cluster should be classified as 'denied'
@@ -189,3 +180,8 @@ class CrudeClassifyer:
 		# TODO: plot volume and reliability over time, hope that there's a good (combination of) features
 		# in the curves that can be used
 		pass
+
+cc = CrudeClassifier()
+result = cc.classify(cluster_list)
+
+print(result)

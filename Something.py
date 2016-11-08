@@ -275,5 +275,4 @@ for id, val in enumerate(clusterOrderning):
 
 count = bincount(clusterOrderning)
 print("amount of clusters total: ", len(count), " amount in each: ", count)
-
 joblib.dump(clusterOrderning, 'clusterList.pkl')
