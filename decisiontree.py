@@ -1,6 +1,7 @@
 from sklearn import tree
 from numpy.random import normal
 from numpy.random import random
+from numpy.random import shuffle
 from numpy.random import choice
 from scipy.stats  import f
 from sklearn.metrics import classification_report
@@ -47,7 +48,7 @@ def treeClassify2(clf, sample, verificationSet, verificationLabels):
 			elif presence[index] == 1:
 				tally[verificationLabels[index]] += 1
 		#prune:
-		if abs(clf.tree_.value[currentNode][0][0]/(clf.tree_.value[currentNode][0][0] + clf.tree_.value[currentNode][0][1])-(tally[0]/(tally[0]+tally[1]))) > 0.2:
+		if tally[0]+tally[1] == 0 or abs(clf.tree_.value[currentNode][0][0]/(clf.tree_.value[currentNode][0][0] + clf.tree_.value[currentNode][0][1])-(tally[0]/(tally[0]+tally[1]))) > 0.2:
 			nextNode = tree._tree.TREE_LEAF
 	return clf.tree_.value[currentNode][0][0] < clf.tree_.value[currentNode][0][1] # prefers false
 
@@ -58,12 +59,48 @@ def treeClassifyAll2(clf, samples, verificationSet, verificationLabels):
 	return labels
 
 class DecisionTreeClassifier:
+	def __init__(self, prune):
+		self.prune = prune
+	
 	def train(self, samples, labels):
 		self.clf = tree.DecisionTreeClassifier()
 		self.clf = self.clf.fit(samples, labels)
 	
 	def classifyAll(self, samples):
-		return treeClassifyAll(self.clf, samples, 5)
+		return treeClassifyAll(self.clf, samples, self.prune)
+	
+	def toDotFile(self):
+		with open("tree-5.dot", 'w') as f:
+			f = tree.export_graphviz(self.clf, out_file=f)
+		# terminal> dot -Tpdf tree.dot -o tree.pdf
+
+class DecisionTreeClassifier2:
+	def train(self, samples, labels):
+		#split data
+		indices = [i for i in range(0,len(samples))]
+		shuffle(indices)
+		split = int(len(samples)/2)
+		one = indices[:split]
+		two = indices[split:]
+		samples1 = []
+		samples2 = []
+		labels1 = []
+		labels2 = []
+		for i in one:
+			samples1.append(samples[i])
+			labels1.append(labels[i])
+		for i in two:
+			samples2.append(samples[i])
+			labels2.append(labels[i])
+		
+		self.clf = tree.DecisionTreeClassifier()
+		self.clf = self.clf.fit(samples1, labels1)
+		
+		self.verificationLabels = labels2
+		self.verificationSamples = samples2
+	
+	def classifyAll(self, samples):
+		return treeClassifyAll2(self.clf, samples, self.verificationSamples, self.verificationLabels)
 	
 	def toDotFile(self):
 		with open("tree.dot", 'w') as f:

@@ -23,9 +23,11 @@ class Cluster:
 	authors = None
 	tweets  = None
 	features = None
+	cid = None
 	
-	def __init__(self, tweets):
+	def __init__(self, tweets, cid):
 		self.tweets = tweets
+		self.cid = cid
 	
 	def getAuthors(self):
 		if self.authors == None:

@@ -4,6 +4,7 @@ from sklearn.externals import joblib
 from pathlib import Path
 from datastructures import *
 from decisiontree import *
+from random import choice
 
 
 pymysql.install_as_MySQLdb()
@@ -59,7 +60,7 @@ if not cluster_file.is_file():
 	del(clusters[0])
 
 	for cid,tweets in clusters.items():
-		cluster_list.append(Cluster(tweets))
+		cluster_list.append(Cluster(tweets,cid))
 
 	joblib.dump(cluster_list, 'cluster_collection.pkl')
 else:
@@ -223,20 +224,52 @@ for cluster, cclass in result.items():
 	else:
 		unlabeled.append(cluster.features)
 		unlabeled_clusters.append(cluster)
-classifier = DecisionTreeClassifier()
-classifier.train(labeled, labels)
-classifier.toDotFile()
-predicted = classifier.classifyAll(unlabeled)
+classifiers = [
+	DecisionTreeClassifier(5),
+	DecisionTreeClassifier(10),
+	DecisionTreeClassifier2(),
+	
+]
+classifierNames = [
+	"tree-5",
+	"tree-10",
+	"tree2",
+	
+]
 
-for index, sample in enumerate(unlabeled_clusters):
-	if predicted[index]:
-		result[sample] = ClusterClass.confirmed
-	else:
-		result[sample] = ClusterClass.denied
+predicted = [None] * len(classifiers)
+allresults = [None] * len(classifiers)
 
+for ci, classifier in enumerate(classifiers):
+	classifier.train(labeled, labels)
+	classifier.toDotFile()
+	predicted[ci] = classifier.classifyAll(unlabeled)
+	allresults[ci] = result
+	
+	for index, sample in enumerate(unlabeled_clusters):
+		if predicted[ci][index]:
+			allresults[ci][sample] = ClusterClass.confirmed
+		else:
+			allresults[ci][sample] = ClusterClass.denied
+	
+	tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
+	for r in allresults[ci].values():
+		tally[r] += 1
+	
+	print(tally)
 
-tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
-for r in result.values():
-	tally[r] += 1
-
-print(tally)
+with open("classified.csv", "w") as f:
+	hd = "clusterId,exampleTweet"
+	for name in classifierNames:
+		hd+= ";"+name
+	f.write(hd+"\n")
+	
+	for cluster, cclass in result.items():
+		classif = ""
+		for res in allresults:
+			classif += ";%s" % res[cluster]
+		
+		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+	f.close()
