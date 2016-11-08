@@ -22,9 +22,9 @@ def create_author(name):
 	sql = "select id,verified,created_at,COMPUTED/(select max(COMPUTED) from users),follower_count,friend_count from users where username=%s"
 	cursor.execute(sql, (name, ))
 	if cursor.rowcount != 1:
-		print("error")
-		raise
-	results = cursor.fetchone()
+		result = (0, 0, 0, 0, 0, 0)
+	else:
+		results = cursor.fetchone()
 	return Author(name, results[2], results[1], results[4], results[5], results[3]) 
 
 cluster_file = Path("cluster_collection.pkl")
@@ -200,11 +200,11 @@ class CrudeClassifier:
 		# in the curves that can be used
 		pass
 
-cc = CrudeClassifier()
-result = cc.classify(cluster_list)
+#cc = CrudeClassifier()
+#result = cc.classify(cluster_list)
 
-tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
-for r in result.values():
-	tally[r] += 1
+#tally = {ClusterClass.unclassified: 0, ClusterClass.confirmed: 0, ClusterClass.denied: 0}
+#for r in result.values():
+#	tally[r] += 1
 
-print(tally)
+#print(tally)
