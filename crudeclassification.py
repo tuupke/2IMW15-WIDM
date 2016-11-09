@@ -7,6 +7,7 @@ from decisiontree import *
 from svm import *
 from random import choice
 
+WITH_INFLUENCE = False
 
 pymysql.install_as_MySQLdb()
 #################
@@ -77,8 +78,9 @@ if not feature_file.is_file():
 else:
 	cluster_features = joblib.load('cluster_features.pkl')
 
-for feat in cluster_features:
-	del feat[5]
+if not WITH_INFLUENCE:
+	for feat in cluster_features:
+		del feat[5]
 for index, cluster in enumerate(cluster_list):
 	cluster.features = cluster_features[index]
 
@@ -249,7 +251,7 @@ for ci, classifier in enumerate(classifiers):
 	classifier.train(labeled, labels)
 	classifier.toDotFile()
 	predicted[ci] = classifier.classifyAll(unlabeled)
-	allresults[ci] = result
+	allresults[ci] = result.copy()
 	
 	for index, sample in enumerate(unlabeled_clusters):
 		if predicted[ci][index]:
@@ -271,10 +273,10 @@ with open("classified.csv", "w") as f:
 	
 	for cluster, cclass in result.items():
 		classif = ""
-		for res in allresults:
-			classif += ";%s" % res[cluster]
+		for ci in range(0,len(classifiers)):
+			classif += ";%s" % (allresults[ci][cluster])
 		
-		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
-		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
-		f.write("%s;\"%s\";%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
 	f.close()
