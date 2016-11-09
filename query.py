@@ -4,6 +4,8 @@ import Something.py
 
 tweetArray = joblib.load('tweets.pkl')
 rawTweets = joblib.load('rawTweets.pkl')
+resById = joblib.load('allresults.pkl')
+clus = joblib.load('clusters.pkl')
 
 def getClosestTweet(evaluatedTweet, originalTweetSet, filteredSet):
     array_of_tweet = []

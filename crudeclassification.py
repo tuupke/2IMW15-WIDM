@@ -267,8 +267,8 @@ clus = {}
 for cluster, cclass in result.items():
 	clus[cluster.cid] = cluster
 
-joblib.dump(resById, './Results/allresults.pkl')
-joblib.dump(clus, './Results/clusters.pkl')
+joblib.dump(resById, 'allresults.pkl')
+joblib.dump(clus, 'clusters.pkl')
 
 
 with open("classified.csv", "w") as f:

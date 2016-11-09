@@ -6,7 +6,7 @@ from sklearn.externals import joblib
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.cluster.hierarchy import linkage, dendrogram
 import langdetect as ld
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
 import pymysql
