@@ -12,6 +12,7 @@ from scipy.cluster.hierarchy import fcluster
 import pymysql
 from numpy import bincount
 from numpy import argmax
+from numpy import argmin
 from numpy import rot90
 
 pymysql.install_as_MySQLdb()
@@ -81,6 +82,12 @@ def filterTweets(originalTweets):
 
     # preparing the sentiment set
     sentiment = positive + negative + emoticons
+
+    for i in vulgair:
+        if i not in sentiment:
+            sentiment.append(i)
+
+    sentiment = [x for x in sentiment if x not in verb_noun]
 
     raw_tweets = [];
     tweet_array = [];
@@ -183,8 +190,29 @@ def make_dendrogram(linkage_matrix, threshold, name):
                     truncate_mode="level", p=15, orientation="right", labels=rot90(rawTweets)[5], leaf_font_size=8);
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')  # save figure as ward_clusters
 
-def getClosestTweet(evaluatedTweet, originalTweetSet):
-    return None;
+def getClosestTweet(evaluatedTweet, originalTweetSet, filteredSet):
+    array_of_tweet = []
+    array_of_tweet.append(("", evaluatedTweet))
+    raw_array = []
+    raw_array.append(evaluatedTweet)
+
+    for line in originalTweetSet:
+        raw_array.append(line)
+    for line in filteredSet:
+        array_of_tweet.append(line)
+
+    vector = vectorize_tweet_set(array_of_tweet)
+    distanceMatrix = 1 - cosine_similarity(vector)
+
+    distancesToOriginal = distanceMatrix[0]
+    distancesToOriginal[0] = 1
+
+    index = argmin(distancesToOriginal)-1 # minus 1 because the search tweet is added
+    print("index of closest tweet = ", index)
+
+    print(originalTweetSet[index][1])
+
+    return index
 
 my_file = Path("tweets.pkl")
 if not my_file.is_file():
@@ -277,4 +305,5 @@ for id, val in enumerate(clusterOrderning):
 
 count = bincount(clusterOrderning)
 print("amount of clusters total: ", len(count), " amount in each: ", count)
+getClosestTweet("Aleppo has been bombed", rawTweets, tweetArray)
 joblib.dump(clusterOrderning, 'clusterList.pkl')
