@@ -6,7 +6,7 @@ from sklearn.externals import joblib
 from sklearn.metrics.pairwise import cosine_similarity
 from scipy.cluster.hierarchy import linkage, dendrogram
 import langdetect as ld
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from pathlib import Path
 from scipy.cluster.hierarchy import fcluster
 import pymysql
@@ -208,9 +208,9 @@ def getClosestTweet(evaluatedTweet, originalTweetSet, filteredSet):
     distancesToOriginal[0] = 1
 
     index = argmin(distancesToOriginal)-1 # minus 1 because the search tweet is added
-    print("index of closest tweet = ", index)
+    #print("index of closest tweet = ", index)
 
-    print(originalTweetSet[index][1])
+    #print(originalTweetSet[index][1])
 
     return index
 
