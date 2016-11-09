@@ -15,17 +15,10 @@ from numpy import argmax
 from numpy import rot90
 
 pymysql.install_as_MySQLdb()
-tweetArray = []
-rawTweets = []
 
-my_file = Path("tweets.pkl")
-if not my_file.is_file():
-    cnx = pymysql.connect(user='chiara', passwd='',
-                 host='131.155.69.222', db='wirdm', charset="utf8mb4")
-
-    cursor = cnx.cursor()
-
+def filterTweets(originalTweets):
     verb_noun = []
+
 
     with open('positive-words.txt') as f:
         positive = f.read().splitlines()
@@ -33,11 +26,10 @@ if not my_file.is_file():
     for word in positive:
         tokens = nltk.pos_tag(nltk.word_tokenize(word))
         if tokens[0][1].startswith("V") | tokens[0][1].startswith("N"):
-          verb_noun.append(word)
+            verb_noun.append(word)
 
-    with open('negative.txt','r') as f:
+    with open('negative.txt', 'r') as f:
         negative = f.read().splitlines()
-
 
     for word in negative:
         tokens = nltk.pos_tag(nltk.word_tokenize(word))
@@ -48,59 +40,52 @@ if not my_file.is_file():
         vulgair = f.read().splitlines()
 
     emoticons = ["*O", "*-*", "*O*", "*o*", "* *",
-                    ":P", ":D", ":d", ":p",
-                    ";P", ";D", ";d", ";p",
-                    ":-)", ";-)", ":=)", ";=)",
-                    ":<)", ":>)", ";>)", ";=)",
-                    "=}", ":)", "(:;)",
-                    "(;", ":}", "{:", ";}",
-                    "{;:]",
-                    "[;", ":')", ";')", ":-3",
-                    "{;", ":]",
-                    ";-3", ":-x", ";-x", ":-X",
-                    ";-X", ":-}", ";-=}", ":-]",
-                    ";-]", ":-.)",
-                    "^_^", "^-^", ":(", ";(", ":'(",
-                    "=(", "={", "):", ");",
-                    ")':", ")';", ")=", "}=",
-                    ";-{{", ";-{", ":-{{", ":-{",
-                    ":-(", ";-(",
-                    ":,)", ":'{",
-                    "[:", ";]"
-                    ]
+                 ":P", ":D", ":d", ":p",
+                 ";P", ";D", ";d", ";p",
+                 ":-)", ";-)", ":=)", ";=)",
+                 ":<)", ":>)", ";>)", ";=)",
+                 "=}", ":)", "(:;)",
+                 "(;", ":}", "{:", ";}",
+                 "{;:]",
+                 "[;", ":')", ";')", ":-3",
+                 "{;", ":]",
+                 ";-3", ":-x", ";-x", ":-X",
+                 ";-X", ":-}", ";-=}", ":-]",
+                 ";-]", ":-.)",
+                 "^_^", "^-^", ":(", ";(", ":'(",
+                 "=(", "={", "):", ");",
+                 ")':", ")';", ")=", "}=",
+                 ";-{{", ";-{", ":-{{", ":-{",
+                 ":-(", ";-(",
+                 ":,)", ":'{",
+                 "[:", ";]"
+                 ]
 
-    auxiliary = ["be", "is", "are","was","were","isn't","aren't","weren't",
-    "can","can't",
-    "could","couldn't",
-    "do","doesn't","does","don't",
-    "have","has","had","haven't","hasn't",
-    "may",
-    "might",
-    "must","mustn't",
-    "shall",
-    "should","shouldn't",
-    "will","won't",
-    "would","wouldn't"]
+    auxiliary = ["be", "is", "are", "was", "were", "isn't", "aren't", "weren't",
+                 "can", "can't",
+                 "could", "couldn't",
+                 "do", "doesn't", "does", "don't",
+                 "have", "has", "had", "haven't", "hasn't",
+                 "may",
+                 "might",
+                 "must", "mustn't",
+                 "shall",
+                 "should", "shouldn't",
+                 "will", "won't",
+                 "would", "wouldn't"]
 
-    statement = ["says","saying","said","claims","claimed","claiming","promising","explaining","say",
-                 "stated","it is the case","promises","promised","explains","explained","claim","admit","admitted","agree",
-                 "agreeing","agrees","agreed","reply","replies","replied"]
+    statement = ["says", "saying", "said", "claims", "claimed", "claiming", "promising", "explaining", "say",
+                 "stated", "it is the case", "promises", "promised", "explains", "explained", "claim", "admit", "admitted",
+                 "agree",
+                 "agreeing", "agrees", "agreed", "reply", "replies", "replied"]
 
-    #preparing the sentiment set
-    sentiment = positive + negative+ emoticons
+    # preparing the sentiment set
+    sentiment = positive + negative + emoticons
 
+    raw_tweets = [];
+    tweet_array = [];
 
-    for i in vulgair:
-        if i not in sentiment:
-            sentiment.append(i)
-
-    sentiment = [x for x in sentiment if x not in verb_noun]
-
-    cursor.execute("select * from tweets")
-    rawTweets = [];
-
-
-    for row in cursor.fetchall():
+    for row in originalTweets:
 
         tweet = row[1]
 
@@ -108,7 +93,7 @@ if not my_file.is_file():
 
             filtered = re.sub("(^((\"|'|\s+)?RT:?\s*))|(http[^\s]+)|(@[^\s]+\s?)|#", "", tweet).lower()
 
-           #filter out question words
+            # filter out question words
             if filtered.find('what') != -1:
                 continue
             if filtered.find('where') != -1:
@@ -124,50 +109,41 @@ if not my_file.is_file():
             if filtered.find('whether') != -1:
                 continue
             if filtered.find('if') != -1:
-                 continue
+                continue
             if len(filtered.split()) < 3:
                 continue
 
-            rawTweets.append(row)
-            tweetArray.append(filtered)
+            raw_tweets.append(row)
+            tweet_array.append(filtered)
 
-    print('Question: ', len(tweetArray))
+    print('Question: ', len(tweet_array))
 
     print("starting sentiment analysis")
 
-    #removing sentiment and emoticon from tweets and cleaning out urls
+    # removing sentiment and emoticon from tweets and cleaning out urls
     wrong = []
 
-    for i,line in enumerate(tweetArray):
+    for i, line in enumerate(tweet_array):
         lowertext = line.lower()
-        #tokens = nltk.pos_tag(nltk.word_tokenize(line))
+        # tokens = nltk.pos_tag(nltk.word_tokenize(line))
         try:
-            if(ld.detect(lowertext)!= "en"):
-                    wrong.append(i)
+            if (ld.detect(lowertext) != "en"):
+                wrong.append(i)
         except ld.lang_detect_exception.LangDetectException:
             wrong.append(i)
-        verb = False
         if tokens[0][0].lower() in auxiliary:
             wrong.append(line)
         elif any(state in lowertext for state in statement):
             continue
         elif any(emotion in lowertext for emotion in sentiment):
             wrong.append(i)
-        #removing tags that start with a verb (question removal)
+            # removing tags that start with a verb (question removal)
 
-    tweetArray = [x for i,x in enumerate(tweetArray) if i not in wrong]
-    rawTweets = [x for i,x in enumerate(rawTweets) if i not in wrong]
-    joblib.dump(tweetArray, 'tweets.pkl')
-    joblib.dump(rawTweets, 'rawTweets.pkl')
-else:
-    tweetArray = joblib.load('tweets.pkl')
-    rawTweets = joblib.load('rawTweets.pkl')
+    tweet_array = [x for i, x in enumerate(tweet_array) if i not in wrong]
+    raw_tweets = [x for i, x in enumerate(raw_tweets) if i not in wrong]
 
-print("tweetsread")
+    return tweet_array, raw_tweets
 
-#preparing for clustering
-stemmer = nltk.SnowballStemmer("english")
-stopwords = nltk.corpus.stopwords.words('english')
 
 def tokenize_and_stem(text):
     # first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
@@ -202,10 +178,36 @@ def make_linkage_matrix(vector):
     return linkage(dist, method='complete', metric='euclidean')
 
 def make_dendrogram(linkage_matrix, threshold, name):
-    fig, ax = plt.subplots(figsize=(10, 20))  # set size
+    fig, ax = plt.subplots(figsize=(20, 40))  # set size
     ax = dendrogram(linkage_matrix, show_leaf_counts=True, color_threshold=threshold,
-                    truncate_mode="level", p=30, orientation="right", labels=rot90(rawTweets)[5], leaf_font_size=4);
+                    truncate_mode="level", p=15, orientation="right", labels=rot90(rawTweets)[5], leaf_font_size=8);
     plt.savefig(name + '.png', dpi=300, bbox_inches='tight')  # save figure as ward_clusters
+
+def getClosestTweet(evaluatedTweet, originalTweetSet):
+    return None;
+
+my_file = Path("tweets.pkl")
+if not my_file.is_file():
+    cnx = pymysql.connect(user='chiara', passwd='',
+                 host='131.155.69.222', db='wirdm', charset="utf8mb4")
+
+    cursor = cnx.cursor()
+    cursor.execute("select * from tweets")
+    databaseTweets = cursor.fetchall()
+    (tweetArray, rawTweets) = filterTweets(databaseTweets);
+    print(len(tweetArray))
+    joblib.dump(tweetArray, 'tweets.pkl')
+    joblib.dump(rawTweets, 'rawTweets.pkl')
+else:
+    tweetArray = joblib.load('tweets.pkl')
+    rawTweets = joblib.load('rawTweets.pkl')
+
+print("tweetsread")
+
+#preparing for clustering
+stemmer = nltk.SnowballStemmer("english")
+stopwords = nltk.corpus.stopwords.words('english')
+
 
 vector = []
 my_file = Path("vector.pkl")

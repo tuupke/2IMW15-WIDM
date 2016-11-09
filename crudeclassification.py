@@ -279,4 +279,5 @@ with open("classified.csv", "w") as f:
 		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
 		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
 		f.write("%s;\"%s\"%s\n" %(cluster.cid, choice(cluster.tweets).statement, classif))
+
 	f.close()
