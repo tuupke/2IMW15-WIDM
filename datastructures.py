@@ -1,3 +1,5 @@
+from enum import Enum
+
 #################
 #<dummy classes>
 
@@ -39,3 +41,11 @@ class Cluster:
 	
 	def sortTweets(self):
 		self.tweets.sort(key=lambda tweet : tweet.time)
+
+class ClusterClass(Enum):
+	# Not yet classified
+	unclassified = 0
+	# Confirmed, or likely to be confirmed
+	confirmed = 1
+	# Unlikely to be confirmed (or even explicitly denied)
+	denied    = 2

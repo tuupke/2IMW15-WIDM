@@ -93,3 +93,6 @@ ENV/
 
 # IntelliJ
 .idea
+/tmp/
+/document.pdf
+/document.synctex.gz

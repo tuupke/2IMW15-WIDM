@@ -1,0 +1,614 @@
+clusterId,exampleTweet;tree-5;tree-10;tree2;linear-svm;poly-svm;rbf-svm;sigmoid-svm
+41;"breaking syria rebels shell aleppo evacuation route: state tv";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+41;"breaking syria rebels shell aleppo evacuation route: state tv ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+41;"breaking syria rebels shell aleppo evacuation route: state tv";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+105;". please save the innocent people of aleppo! sanction russia immediately and implement a no-fly zone! eusavealeppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+105;".please save the innocent people of aleppo! sanction russia immediately and implement a no-fly zone! eusavealeppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+105;".please save the innocent people of aleppo! sanction russia immediately and implement a no-fly zone!";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+9;"yaadlinksradio: "‘i saw my father dying’: a view from aleppo’s government-held side" by anne barnard via nyt the n… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+9;"worldnews: ‘i saw my father dying’: a view from aleppo’s government-held side ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+9;""‘i saw my father dying’: a view from aleppo’s government-held side"  therealnenye trnblog";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+62;"czech fm announces financial aid for a number of children in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+62;"czech fm announces financial aid for a number of children in aleppo 
+ via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+62;"czech fm announces financial aid for a number of children in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+155;"aleppo vid: terrorists break truce, syrian forces, russian jet responded  via syria";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+155;"aleppo vid: terrorists break truce, syrian forces, russian jet responded  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+155;"aleppo vid: terrorists break truce, syrian forces, russian jet responded  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+18;"russian military streaming pics of humanitarian corridors for militants
+aleppo syria 
+";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+18;"aleppo: russian military streaming pics of humanitarian corridors for militants live ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+18;"aleppo: russian military streaming pics of humanitarian corridors for militants live ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+123;"displaced children in aleppo. children continue to bear the brunt of the violence in syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+123;"from the children of aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+123;"'no fly zone' propaganda: crocodile tears for the 'children of aleppo'  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+104;"amaqagency second turkish tank damaged after targeting it with a guided missile in the village talil akhtarin aleppo fıratkalkanı 1 tank🚮";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+104;"amaqagency second turkish tank damaged after targeting it with a guided missile in the village talil akhtarin aleppo fıratkalkanı 1 tank🚮";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+104;"is target a turkish tank south of akhtarin, north aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+99;"in response to moscow’s truce…the opposition
+ launches 'aleppo battle 2'
+
+ ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+99;"in response to moscow’s truce…the opposition launches 'aleppo battle 2'
+
+ ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+99;"in response to moscow’s truce…the opposition launches 'aleppo battle 2'
+
+ ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+32;"bbc news - syria conflict: russia tells rebels to leave aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+32;"syria conflict: russia tells rebels to leave aleppo - bbc news ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+32;"russia tells rebels to leave syria's aleppo by friday evening - russia and the syrian army on wednesday... ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+51;"10-hour humanitarian pause begins in syria's aleppo, russian defense ministry says - interfax via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+51;"russian defense ministry says situation in iraqi mosul is nothing like in syria's aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+51;"10-hour humanitarian pause begins in syria's aleppo, russian defense ministry says - interfax via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+159;"syria: commander of terrorists' anti-aircraft regiment killed in aleppo   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+159;"syrianarmy kills terrorists’ anti-aircraft regiment commander in aleppo
+-  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+159;" syrian army kills terrorists’ anti-aircraft regiment commander in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+44;"inside aleppo: a city divided and awaiting all out war ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+44;"syria • inside aleppo: a city divided and awaiting all out war ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+44;"inside aleppo: a city divided and awaiting all out war - 
+dontforgetsyria";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+124;"retweeted farheen rizvi (
+one family's journey out of the bloody 'tragedy' of eastern aleppo... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+124;"one family's journey out of the bloody 'tragedy' of eastern aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+124;"civilians of east aleppo being held captive as human shield by rebels. the bloody 'tragedy' of eastern aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+149;"aleppo is at the center of a new cold war ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+149;"aleppo is at the center of a new cold war  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+149;"aleppo is at the center of a new cold war ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+38;""syria: buses wait for e. aleppo residents as humanitarian pause gets underway"  youtube  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+38;"syria: buses wait for e. aleppo residents as humanitarian pause gets und...  с помощью ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+38;"syria: buses wait for e. aleppo residents as humanitarian pause gets underway 
+video, videonews, news, ruptly, v…";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+122;""we call on the international community to protect civilians of syria, our children and women. nothing more." care partner in aleppo.";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+122;""we call on the international community to protect civilians of syria, our children and women. nothing more." care partner in aleppo.";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+122;""we call on the international community to protect civilians of syria, our children and women. nothing more." care partner in aleppo.";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+64;"brilliant: putin exposes western hypocrisy on aleppo and mosul eddie  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed
+64;"putin exposes western hypocrisy on aleppo and mosul (video)  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed
+64;"brilliant: putin exposes western hypocrisy on aleppo and mosul ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed
+125;"aleppo "russia’s position is that there is no military solution to the syria'n issue" dmitry medvedev just said.
+
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+125;"maybe not...
+
+aleppo "russia’s position is that there is no military solution to the syria'n issue" dmit… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+125;"maybe not...
+
+aleppo "russia’s position is that there is no military solution to the syria'n issue" dmit… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+55;"details: attack targets western part of humanitarian corridor near castello road in aleppo  …";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+55;"two russian officers injured in militants' attack near castello road in aleppo:  via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+55;"two russian officers injured in militants' attack near castello road in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+110;"russian experts in aleppo to collect evidence of chemical weapons use ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+110;"russian experts come to aleppo to collect evidence of chemical weapons use
+ ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+110;"media reports: terrorists in aleppo used chemical weaponry once again, in a routine manner. ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+57;"bbc news - syria conflict: east aleppo braces itself for more air strikes ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+57;"syria conflict: east aleppo braces itself for more air strikes ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+57;"bbc news - syria conflict: east aleppo braces itself for more air strikes ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+119;"syria rebels renew aleppo attack  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+119;"syria rebels renew aleppo attack  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+119;"syria rebels renew aleppo attack  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+4;"u.n. says can't use russian aleppo pause to send aid  australia reuters";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+4;"u.n. says can't use russian aleppo pause to send aid  persian frankfurt govhack";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+4;"u.n. says can't use russian aleppo pause to send aid unitednations jenslaerke...  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+75;"your friday headlines: tory mp resigns, marksandspencer closes stores, aleppo, and officialsting plays bataclan ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+75;"your friday headlines: tory mp resigns, marksandspencer closes stores, aleppo, and officialsting plays bataclan ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+75;"your friday headlines: tory mp resigns, marksandspencer closes stores, aleppo, and officialsting plays bataclan ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+141;"virtual reality offers new pause, exits for syrian's besieged aleppo fakeheadlinebot learntocode makeatwitterbot javascript";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+141;"putin offers new pause for aleppo.. related articles: ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+141;"paris las vegas offers new pause, exits for syrian's besieged aleppo fakeheadlinebot learntocode makeatwitterbot javascript";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+89;"isis, al-qaeda and the "moderate rebels" are... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+89;"isis, al-qaeda and the "moderate rebels" are... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+89;"isis, al-qaeda and the "moderate rebels" are... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+74;"russian experts collecting evidence of anti-govt chemical attack in aleppo – defense ministry… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+74;"russian experts collecting evidence of anti-govt chemical attack in aleppo – defense ministry… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+74;"russian experts collecting evidence of anti-govt chemical attack in aleppo – defense ministry ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+29;"visions of hell: another day in aleppo, ancient city under siege - la times ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+29;"do not avert your gaze: 
+visions of hell: another day in aleppo, ancient city under siege: ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+29;"los angeles times - usa - visions of hell: another day in aleppo ancient city under siege - ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+86;"inside the city of hell and an appalling affront to humanity: our veteran war reporter has covered many bloody… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+86;"inside the city of hell and an appalling affront to humanity: our veteran war reporter has…  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+86;"inside the city of hell and an appalling affront to humanity: our veteran war reporter has covered many bloody… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+24;"russo-syrian humanitarian pause starts in aleppo  middleeast news russia society";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+24;"russo-syrian humanitarian pause starts in aleppo  middleeast news russia society";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+24;"russo-syrian humanitarian pause starts in aleppo  middleeast news russia society";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+154;"russia says it pauses fighting in aleppo to allow rebels, residents to leave |  syria";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+154;"russia says it pauses fighting in aleppo to allow rebels, residents to leave  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+154;"russia says it pauses fighting in aleppo to allow rebels, residents to leave |  syria";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+39;"1 of 6 humanitarian corridors to allow civilians to leave e aleppo btw 9am &amp; 7pm. no buses waiting, no ppl leaving… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+39;"om 19:00 in aleppo (18:00 uur hier) loopt humanitaire pauze af.
+pics of humanitarian corridors for militants live :… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+39;"2 russian officers were wounded in shelling in aleppo   ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+98;"syria out of 35 doctors left in east aleppo, only 7 are surgeons. many patients in need of urgent specialised car… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+98;"syria out of 35 doctors left in east aleppo, only 7 are surgeons. many patients in need of urgent specialised car… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+98;"syria out of 35 doctors left in east aleppo, only 7 are surgeons. many patients in need of urgent specialised ca… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+128;"reliefweb iraq: flash update – aleppo– 03 november 2016: source: un office for the coordination of humanitarian… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+128;"reliefweb iraq: flash update – aleppo– 03 november 2016: source: un office for the coordination of humanitarian… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+128;"reliefweb iraq: flash update – aleppo– 03 november 2016: source: un office for the coordination of humanitarian… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+150;"terrorist groups continue to block civilians' exit from aleppo city
+ ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+150;"terrorist groups continue to block civilians exit from aleppo city  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+150;"retweeted fars news agency (
+terrorist groups continue to block civilians' exit from aleppo city... ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+91;"syria rebels launch new attacks to end aleppo siege ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+91;"syria rebels launch new attacks to end aleppo siege ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+91;"syria rebels launch new attacks to end aleppo siege ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+60;"from aleppo to belfast ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+60;"from aleppo to belfast  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+60;"from aleppo to belfast ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+14;"rebel-held sector of aleppo braces for renewed bombardment ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+14;"3novices : world › rebel-held zone of syria's aleppo braces for renewed bombardment  syrian rebels and civilians s…";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+14;"rebel-held sector of aleppo braces for renewed bombardment ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+76;"inside aleppo: a city braced for another escalation of violence  unitedkingdom ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+76;"inside aleppo: a city braced for another escalation of violence ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+76;"inside aleppo: a city braced for another escalation of violence  unitedkingdom ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+46;"russia’s ultimatum to break aleppo while all eyes on us elections  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+46;"russia’s ultimatum to break aleppo while all eyes on us elections  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+46;"russia’s ultimatum to break aleppo while all eyes on us elections   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+108;"adicionei um vídeo a uma playlist  war 2016 - battle of aleppo: heavy clashes and intense urban";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+108;"adicionei um vídeo a uma playlist  news] syria 2016 - battle of aleppo heavy clashes and";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+108;"adicionei um vídeo a uma playlist  war 2016 - battle of aleppo: heavy clashes and intense urban";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+127;"3 suqour al sham brigade commanders killed in aleppo
+ syria سوريا حلب";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+127;"3 suqour al sham brigade (falcons of the levant) commanders killed in aleppo in clashes with saa units. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+127;"3 suqour al sham brigade (falcons of the levant) commanders killed in aleppo in clashes with saa units. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+1;"rebel-held zone of syria's aleppo braces for renewed bombardment - reuters ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+1;"rebel-held zone of syria's aleppo braces for renewed bombardment -  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+1;"rebel-held zone of syria's aleppo braces for renewed bombardment  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+42;"thenewsclub aleppo evacuation corridor 'hit by mortar shells' during humanitarian pause  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+42;"thenewsclub aleppo evacuation corridor 'hit by mortar shells' during humanitarian pause  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+42;"aleppo evacuation corridor 'hit by mortar shells' during humanitarian pause  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+52;"russian drones observe every move islamist rebels make in aleppo 
+ ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+52;"russian drones observe every move islamist rebels make in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+52;"russian drones observe every move islamist rebels make in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+19;"russian defense ministry: 2 russian servicemen lightly wounded in aleppo, syria, area - interfax ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+19;"russian defense ministry: 2 russian servicemen lightly wounded in aleppo, syria, area - interfax ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+19;"russian defense ministry: 2 russian servicemen lightly wounded in aleppo, syria, area - interfax iraq… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+56;" conflict: rebels ramp up attacks on government-held aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+56;"syria conflict: rebels ramp up attacks on government-held aleppo worldnews ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+56;"syria conflict: rebels ramp up attacks on government-held aleppo  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+121;"syria and its ally russia have given rebels and civilians until this evening to leave east aleppo or face... ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+121;"
+time to leave east aleppo 
+save yourself 
+
+your guys cannot break siege 
+your last chance";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+121;".time is running out for the children of east aleppo. over the last 3weeks, at least 321 children have been wounded by airstrikes";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+21;".dontforgetsyria, putin will use elections to exterminate aleppo in silence. ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+21;".dontforgetsyria, putin will use elections to exterminate aleppo in silence. ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+21;".dontforgetsyria, putin will use elections to exterminate aleppo in silence. ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+43;"two russian servicemen wounded as militants shell humanitarian corridor in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+43;"2 russian soldiers are injured on aleppo checkpoint, after terrorists shelled a humanitarian corridor. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+43;"two russian servicemen wounded as militants shell humanitarian corridor in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+12;"top story: aleppo evacuations to fall flat, rebels prevent any exit: syria offi…  see more ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+12;"new post: "aleppo evacuations to fall flat, rebels prevent any exit: syria official" ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+12;"aleppo evacuations to fall flat, rebels prevent any exit - syria official: beirut (reuters) - a…  news reuters";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+65;"breaking || south aleppo
+
+fsa forces kills group of hezbollah hiding out in telet ahad with tow missile: 
+
+syria";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+65;"عربستان_سعودى fsa news 
+south aleppo  fsa forces kills group of hezbollah hiding out in telet ahad with tow missile:  …";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+65;"مشهد fsa news 
+south aleppo  fsa forces kills group of hezbollah hiding out in telet ahad with tow missile:    …";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+139;"putin is threatening to residents of aleppo: "it`s your last chance to leave city alive - 4 november" savealeppo
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+139;"putin is threatening to residents of aleppo: "it`s your last chance to leave city alive - 4 november" savealeppo
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+139;"putin is threatening to residents of aleppo: "it`s your last chance to leave city alive - 4 november" savealeppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+59;"rebel groups detonate huge car bombs in western aleppo - ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+59;"rebel groups detonate huge car bombs in western aleppo - ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+59;"rebel groups detonate huge car bombs in western aleppo - ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+2;"rebel-held zone of syria’s aleppo braces for renewed bombardment
+";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+2;"rebel-held zone of syria’s aleppo braces for renewed bombardment ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+2;"rebel-held zone of syria's aleppo braces for renewed bombardment - reuters  idefy";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+54;"breaking: russia says two soldiers 'lightly wounded' in aleppo rebel shelling - via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+54;"russia says two soldiers 'lightly wounded' in aleppo rebel shelling | via afp
+
+— gma news breaking (gmanewsbreaking) november 4, 2016";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+54;"breaking 
+russia says two soldiers 'lightly wounded' in aleppo rebel shelling 
+- afp - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+83;"aleppo: fear and distrust in besieged syrian city as army offers to let civilians flee - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+83;"fear and distrust in aleppo as army offers to let civilians flee  via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+83;"aleppo: fear and distrust in besieged syrian city as army offers to let civilians flee - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+143;"activists have reported calm as a russian-announced "humanitarian pause" has taken effect in aleppo… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+143;"activists have reported calm as a russian-announced "humanitarian pause" has taken effect in aleppo… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+143;"activists have reported calm as a russian-announced "humanitarian pause" has taken effect in aleppo… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+92;"syria rebels reject russian demand to withdraw from aleppo: rebel official  via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+92;"al jazeera - rebels reject russian demand to leave syria's aleppo  russia war";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+92;"syria: opposition rejects russian demand to withdraw from aleppo - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+145;"the grains feat charlotte guy (aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+145;"the grains feat charlotte guy (aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+145;"the grains feat charlotte guy (aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+45;"_com: more: evacuation forced rt crew in aleppo to cease live transmissions ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+45;"more: evacuation forced rt crew in aleppo to cease live transmissions ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+45;"more: evacuation forced rt crew in aleppo to cease live transmissions 
+
+— rt (rt_com) november 4, 2016";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+35;"a special report from the besieged city of aleppo syria ai humanrights news  … ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+35;"a special report from the besieged city of aleppo syria ai humanrights news  … ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+35;"a special report from the besieged city of aleppo syria ai humanrights news  … ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+61;".from aleppo to belfast: a human's story. syria aleppo humans humancrisis";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+61;".bbc news - from aleppo to belfast: a human being's story humancrisis";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+61;"from aleppo to belfast - one man's story (bbc) ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+10;"aleppo evacuations to fall flat, rebels prevent any exit: syria official ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+10;"aleppo evacuations to fall flat, rebels prevent any exit: syria official via /r/worldnews ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+10;"aleppo evacuations to fall flat, rebels prevent any exit - syria official |";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+96;"| drone footage of failed rebels' attack on 3000 project, western aleppo source: … ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+96;"drone footage of failed rebel advance on the western aleppo 3000 apartment projects  syria aleppo saa russia
+";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+96;"drone footage of failed rebels' attack on 3000 project, western aleppo
+source:  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+47;".dontfor getsyria in the words of 7 yr old syrian girl 'i am counting my living days in aleppo' ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+47;".dontfor getsyria in the words of 7 yr old syrian girl 'i am counting my living days in aleppo' ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+47;".dontfor getsyria in the words of 7 yr old syrian girl 'i am counting my living days in aleppo' ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+80;".trump said 2 help russia in syria. no we should stop them! 'moscow military assault on aleppo' ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+80;".trump said 2 help russia in syria. no we should stop them! 'moscow military assault on aleppo' ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+80;".trump said 2 help russia in syria. no we should stop them! 'moscow military assault on aleppo' ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+100;"the remnant in aleppo: muslim lives being transformed by christian witness  christiannews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+100;"the remnant in aleppo: muslim lives being transformed by christian witness ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+100;"the remnant in aleppo: muslim lives being transformed by christian witness  christiannews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+93;"aleppo truce ends with no rebel evacuation - xinhua | ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+93;"aleppo truce ends with no rebel evacuation - xinhua |  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+93;"aleppo truce ends with no rebel evacuation - xinhua |  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+134;"reporting from aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+134;"syria: heavy attacks on aleppo city  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+134;"no words (aleppo, syria, april 2010) –  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+71;"rebels conduct suicide attack on government-held area aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+71;"rebels conduct suicide attack on government held area aleppo 💥  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+71;"rebels conduct suicide attack on government-held area aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+103;"isil aleppo
+📷targeting vso in halab's northern countryside w. mortar rounds ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+103;"isil aleppo
+📷targeting vso in halab's northern countryside w. mortar rounds 
+nationalsandwichday wonderwoman";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+103;"isil aleppo
+📷targeting vso in halab's northern countryside w. mortar rounds 
+hillaryindictment hamiltonmixtape";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+66;"lebanese football player killed by militants in syria’s aleppo battlefield  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+66;"lebanese football player killed by militants in syria’s aleppo battlefield: a professional lebanese…… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+66;" lebanese football player killed by militants in syria’s aleppo battlefield ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+34;"syrian war report – november 4, 2016: govt forces repel fierce militant advance in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+34;"syrian war report – november 4, 2016: govt forces repel fierce militant advance in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+34;"syrian war report – november 4, 2016: govt forces repel fierce militant advance in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+50;".putin to aleppo's people: live or die. dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+50;".putin to aleppo's people: live or die. dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+50;".putin to aleppo's people: live or die. dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+31;".aleppo's facts. syria dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+31;".aleppo's facts. syria dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+31;".aleppo's facts. syria dontforgetsyria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+53;"lebanon garbage crisis gets helping hand from syrian recyclers aleppo  … via ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+53;"lebanon garbage crisis gets helping hand from syrian recyclers aleppo  via ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+53;"lebanon garbage crisis gets helping hand from syrian recyclers aleppo  … via ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+95;"rebels escalate attacks on western aleppo, killing 12 civilians  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+95;"rebels escalate attacks on western aleppo, killing 12 civilians -- news from  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+95;"rebels escalate attacks on western aleppo, killing 12 civilians -- news from  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+3;"u.n. says can't use russian aleppo pause to send aid ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+3;"u.n. says can't use russian aleppo pause to send aid  syria حلب لبنان";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+3;"الاحواز u.n. says can't use russian aleppo pause to send aid ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+129;"sw aleppo: jaish mujahideen struck with a tow a building on tell uhud full of pro-regime forces (said hezbollah).… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+129;"sw aleppo: rebels struck with a tow a building on tell uhud full of pro-government forces (said hezbollah).   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+129;"sw aleppo: rebels struck with a tow a building on tell uhud full of pro-government forces (said hezbollah).   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+23;".clock ticking for east aleppo as russia announce the extermination of 300 000 people. dontforgetsyria";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+23;".clock ticking for east aleppo as russia announce the extermination of 300 000 people. dontforgetsyria";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+23;".clock ticking for east aleppo as russia announce the extermination of 300 000 people. dontforgetsyria";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+88;"the latest world news pulse "the paper"!  thanks to aleppo icymi";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+88;"thanks !!!  semper fi !!!! ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+88;"the latest the r.a.w.w. scoop daily!  thanks to syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+81;"this is 7 yr old bana alabed
+she is under siege in aleppo,syria
+in my eyes, she is the anne frank of n… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+81;"this is 7 yr old bana alabed
+she is under siege in aleppo,syria
+in my eyes, she is the anne frank of… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+81;"this is 7 yr old bana alabed
+she is under siege in aleppo,syria
+in my eyes, she is the anne frank of n… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+36;"they aren't. they can't. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+36;"they aren't. they can't. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+36;"they aren't. they can't. ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+106;"praise mosul, bash aleppo: western media guide for iraq-syria coverage  mosul aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+106;"praise mosul, bash aleppo: western media guide for iraq-syria coverage ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+106;"praise mosul, bash aleppo: western media guide for iraq-syria coverage: ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+70;"isis vehicle captured by sdf in northern aleppo.
+step_news ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+70;"isis vehicle captured by sdf in northern aleppo.     ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+70;"isis vehicle captured by sdf in northern aleppo.     ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+78;"reports from aleppo city - 2 november - eng captions  7news realnews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+78;"reports from aleppo city - 2 november - eng captions  breakingnews realnews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+78;"reports from aleppo city - 2 november - eng captions  7news realnews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+84;"aleppo churches open doors to displaced muslim families ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+84;"aleppo churches are opening their doors to displaced muslims ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+84;"aleppo churches open doors to displaced muslim families  christians deserve to be persecuted.";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+13;"rebel-held zone of syria's aleppo braces for renewed bombardment: beirut (reuters) - syrian rebels…  news reuters";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+13;"rebel-held zone of syria's aleppo braces for renewed bombardment beirut (reuters) - syrian rebels and civilians sh… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+13;"rebel-held zone of syria's aleppo braces for renewed bombardment  via 
+skewered report by reuters";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+144;"standing with aleppo today and all days. savealeppo withaleppo withsyria";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+144;"stand with (some of) aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+144;"join me in standing with one of the last doctors in aleppo: call on obama and merkel to act now to ...  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+7;"new york (ny) times: &amp;x2018;i saw my father dying': a view from aleppo&amp;x2019;s government-held side";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+7;"en otras noticias: ‘i saw my father dying’: a view from aleppo’s government-held side  xalapa";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+7;"cbelive_com click here  "‘i saw my father dying’: a view from aleppo’s government-held si… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+156;"terrorists use chemical weapons against civilians in aleppo again
+ ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+156;"terrorists use chemical weapons against civilians in aleppo again ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+156;"terrorists use chemical weapons against civilians in aleppo again ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+25;"an exit has opened for aleppo’s trapped civilians to leave. but no one is using it – los angeles times ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+25;"an exit has opened for aleppo's trapped civilians to leave. but no one is using it ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+25;"an exit has opened for aleppo's trapped civilians to leave. but no one is using it ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+37;"sputnikint: aleppo humanitarian pause introduced by russia enters into force  syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+37;"aleppo humanitarian pause introduced by russia enters into force ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+37;"aleppo humanitarian pause introduced by russia enters into force  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+67;"professional lebanese soccer player killed in syria’s aleppo  ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+67;"professional lebanese soccer player killed in syria’s aleppo  ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+67;"professional lebanese soccer player killed in syria’s aleppo  usa iran military ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+94;"government airstrikes, rebel shelling defy aleppo truce on friday. syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+94;"government airstrikes, rebel shelling defy aleppo truce  syria";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+94;"government airstrikes, rebel shelling defy aleppo truce on friday. syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+132;"syria:russia's defenceministry launches webcast ...mostrating insurgents' withdrawal from aleppo  .";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+132;"fsa recaptures villages from isis in aleppo’s akhtareen [orient news]
+";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+132;"in aleppo, there's no semblance of normalcy:  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+113;"russia's strategy in aleppo: delay diplomacy until shi'ite militias finish with mosul ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+113;"russian strategy in aleppo: delay diplomacy, let shi'ite militias finish the job - haaretz ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+113;"russian strategy in aleppo: delay diplomacy, let shi'ite militias finish the job - middle east news - haaretz ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+49;"syria: al-qaeda launches ‘do or die’ attempt to break siege of eastern aleppo  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+49;"syria: al-qaeda launches 'do or die' attempt to break siege of eastern aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+49;"al-qaeda launches ‘do or die’ attempt to break siege of eastern aleppo: ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+82;"isil aleppo
+📷conduct of battles against pkk ne industrial city
+ 
+wonderwoman foxnews2016";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+82;"isil aleppo
+📷conduct of battles against pkk ne industrial city
+ 
+hillaryindictment cnntbt";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+82;"isil aleppo
+📷conduct of battles against pkk ne industrial city
+ 
+nationalsandwichday nbc";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+112;"bombed by russian warplanes on alotarb aleppo, syria 11.04.2016 ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+112;"bombed by russian warplanes on alotarb aleppo, syria 11.04.2016 ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+112;"bombed by russian warplanes on alotarb aleppo, syria 11.04.2016 ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+17;"2 russian soldiers injured, media evacuated in militant shelling of humanitarian corridor in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+17;"aleppo: 2 russian soldiers injured, media evacuated in militant shelling of humanitarian corridor ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+17;"aleppo: 2 russian soldiers injured, media evacuated in militant shelling of humanitarian corridor
+
+
+rt lies!!";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+158;"livenews liveleak panamapapers terrorists kill 12, injure 200 in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+158;"terrorists kill 12, injure 200 in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+158;"terrorists kill 12, injure 200 in aleppo  primenews breakingnews";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+90;"islamic state, turkey-backed rebels launch simultaneous attacks on kurdish positions -  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+90;"islamic state, turkey-backed rebels launch simultaneous attacks on kurdish positions positions in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+90;"islamic state, turkey-backed rebels launch simultaneous attacks on kurdish positions -  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+157;"'terrorist toaster' admiral kuznetsov is on her way to syria.
+
+and she's not alone.
+
+syria aleppo terrorist… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+157;"'terrorist toaster' admiral kuznetsov is on her way to syria.
+
+and she's not alone.
+
+syria aleppo terrorist… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+157;"'terrorist toaster' admiral kuznetsov is on her way to syria.
+
+and she's not alone.
+
+syria aleppo terrorist… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+116;"demonstrators in london protest aleppo attacks ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+116;"demonstrators in london protest aleppo attacks
+ ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+116;"demonstrators in london protest aleppo attacks ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+72;"friday syria daily: rebels attack again near aleppo  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+72;"friday syria daily: rebels attack again near aleppo    ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+72;"friday syria daily: rebels attack again near aleppo 
+
+ … ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+6;""‘i saw my father dying’: a view from aleppo’s government-held side" by anne barnard via nyt the new york times ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+6;""‘i saw my father dying’: a view from aleppo’s government-held side" by anne barnard via nyt the new york times ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+6;""‘i saw my father dying’: a view from aleppo’s government-held side" by anne barnard via nyt the new york times ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+147;"syrien aleppo old city 23.03.2013  img_7327 –  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+147;"syrien aleppo old city 23.03.2013  tr_05864 –  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+147;"syrien aleppo halep 20.12.2012  tr_05640 checkpoint –  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+8;"‘i saw my father dying’: a view from aleppo’s government-held side ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+8;"‘i saw my father dying’: a view from aleppo’s government-held side ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+8;"‘i saw my father dying’: a view from aleppo’s government-held side ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+146;"aleppo, a historic city in ruins |rferl| ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+146;"aleppo, a historic city in ruins |rferl| ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+146;"aleppo, a historic city in ruins |rferl| ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+16;"russian-declared pause in syria's aleppo broken  emm";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+16;"russian-declared pause in syria’s aleppo broken ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+16;"russian-declared pause in syria's aleppo broken: two russian soldiers and a syrian… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+126;"leaflets aleppo "you know that everyone has given up on you. they left you alone to face your doom and nobody will give you any help" 2/3";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+126;"'you know that everyone has given up on you, they left you alone to face your doom' leaflets dropped on e aleppo t… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+126;"'you know that everyone has given up on you, they left you alone to face your doom' leaflets dropped on e aleppo… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+102;"parish priest of aleppo: christians are the target of many attacks ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+102;"parish priest of aleppo: christians are the target of many attacks   romereports";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+102;"parish priest of aleppo: christians are the target of many attacks   romereports";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+153;"aleppo fighting claims 5 soldiers from masyaf, including high-ranking general syria  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+153;"aleppo fighting claims 5 soldiers from masyaf, including high-ranking general syria  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+153;"aleppo fighting claims 5 soldiers from masyaf, including high-ranking general syria  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+15;"russian-declared pause in syria's aleppo broken  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+15;"russian-declared pause in syria's aleppo broken  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+15;"russian-declared pause in syria's aleppo broken  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+26;".russia will 'annihilate' aleppo while you will be busy by elections. dontforgetsyria syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+26;".russia will 'annihilate' aleppo while you will be busy by elections. dontforgetsyria syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+26;".russia will 'annihilate' aleppo while you will be busy by elections. dontforgetsyria syria ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+85;"syria aleppo prayers for the peace of syria. peace must come to the ancient land. 
+
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+85;"syria aleppo prayers for the peace of syria. 
+
+peace must come to the ancient land !
+
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+85;"syria aleppo prayers for the peace of syria. 
+
+peace must come to the ancient land !
+
+";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+30;".putin says to bana: leave or i will kill you. dontforgetsyria aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+30;".putin says to bana: leave or i kill you. dontforgetsyria aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+30;".putin says to bana: leave or i kill you. dontforgetsyria aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+138;"syrian army, allies foil major attack by militants west of aleppo
+
+syrian army and allied forces managed on... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+138;"the advance of the syrian army and its allies attack the mercenaries to the west of aleppo axis:  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+138;"the advance of the syrian army and its allies attack the mercenaries to the west of aleppo axis:  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+40;"standwithaleppo &amp; with &amp; the children of aleppo this sunday 
+facebook event:   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+40;"standwithaleppo &amp; with &amp; the children of aleppo this sunday 
+
+facebook event:  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+40;"standwithaleppo &amp; with &amp; the children of aleppo this sunday 
+
+facebook event:  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+131;"kerry will be most senior us official ever to travel to antarctica. will visit mcmurdo station, the largest us research station there.";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+131;"hailed as outlaws in turkey, the council is committed to feminist principles nonetheless. ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+131;"i issued 'order no. 227' not a single step back! aleppo will never fall, you can write that in your minds.";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+79;"armed opposition enter new aleppo, engage in street battles with regime forces: rebels syria  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+79;"armed opposition enter new aleppo, engage in street battles with regime forces: rebels syria… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+79;"armed opposition enter new aleppo, engage in street battles with regime forces: rebels syria… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+27;"qaeda -  liberating syria from al qaeda-isis: us-supported terrorists admit taking heavy casualties in aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+27;"liberating syria from al qaeda-isis: us-supported terrorists admit taking heavy casualties in aleppo  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+27;"liberating syria from al qaeda-isis: us-supported terrorists admit taking heavy casualties in aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+137;"syrian army gains more areaas along aleppo-hama highway ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+137;"following the previous gains in northern hama,the syrian army gains more area,s along the aleppo-hama highway. ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+137;"following the previous gains in northern hama,the syrian army gains more area,s along the aleppo-hama highway. ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+148;"aleppo war battlefield: syrian brigade uses a grad as a tow and it works!
+
+
+syria saa";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+148;"aleppo war battlefield: syrian brigade uses a grad as a tow and it works!
+
+
+syria saa";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+148;"aleppo war battlefield: syrian brigade uses a grad as a tow and it works!
+
+
+syria saa";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+68;"continued clashes and more human losses in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+68;"عربستان_سعودى continued clashes and more human losses in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+68;"ايران continued clashes and more human losses in aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+48;"russian jets launch first airstrikes over west aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+48;"retweeted al-masdar news (
+russian jets launch first airstrikes over west aleppo... ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+48;"retweeted al-masdar news (
+russian jets launch first airstrikes over west aleppo... ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+33;"revolt held zone of syria's aleppo props for restored barrage ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+33;"rebel groups clash with each other in syria's aleppo  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+33;"people in aleppo bracing for renewed russia-n bombardment as humanitarian corridors remain deserted ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+97;"retweeted oz katerji (
+russia has threatened to kill every man, woman &amp; child in east aleppo this... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+97;"retweeted oz katerji (russia has threatened to kill every man, woman &amp; child in east aleppo this... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+97;"retweeted oz katerji (russia has threatened to kill every man, woman &amp; child in east aleppo this... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+135;"front-lines at the saa and  allies controlled area of minyan, western aleppo today syria24
+
+s.m.";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+135;"front-lines at the saa and  allies controlled area of minyan, western aleppo today syria24
+
+s.m.";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+135;"front-lines at the saa + allies controlled area of minyan, western aleppo today (04/11/2016) ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+140;"syria crisis: russia offers ‘final truce chance’ to aleppo rebels  vía ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+140;"syria crisis: russia offers ‘final truce chance’ to aleppo rebels  vía ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+140;"syria crisis: russia offers ‘final truce chance’ to aleppo rebels  vía ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+133;"clashes subside between syrian rebels in city of aleppo.. related articles: ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+133;"clashes subside between syrian rebels in city of aleppo.. related articles: ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+133;"clashes subside between syrian rebels in city of aleppo - fox news ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+107;"page 15        meat-grinder phase       aleppo 
+2 ighimasi jfs
+2  sham front militant
+
+( i had two page 1… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+107;" page 13        the meat-grinder phase 2                        aleppo ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+107;"page 15        meat-grinder phase       aleppo 
+2 ighimasi jfs
+2  sham front militant
+
+( i had two page 1… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+115;"syria is out!  ff aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+115;"syria is out!  ff syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+115;"syria is out!  ff aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+58;"breaking news from bbc: owen bennett-jones: aleppo braced / read more at  news bbc";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+58;"bbcnews owen bennett-jones: aleppo braced for more airstrikes: east aleppo braces itself for airstrikes…… ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+58;"owen bennett-jones: aleppo braced for more airstrikes - east aleppo braces itself for airstrikes after rebel fi... ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+20;".don't lose aleppo to the elections. read the thumbprint. dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+20;".don't lose aleppo 2 the elections. read the thumbprint. dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+20;".don't lose aleppo 2 the elections. read the thumbprint. dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+11;"aleppo evacuations to fall flat, rebels prevent any exit - s world haber  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+11;"aleppo evacuations to fall flat, rebels prevent any exit - s world haber  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+11;"aleppo evacuations to fall flat, rebels prevent any exit - s world haber  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+87;"the latest the insyrianow daily!  thanks to aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+87;"the latest insyrianow daily!  thanks to syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+87;"the latest the insyrianow daily!  thanks to syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+118;"rebels set off new attacks in government-held aleppo  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+118;"syrian rebels launch new attacks on government-held aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+118;"rt follow rebels set off new attacks in government-held aleppo  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+109;"at least 13 killed in russian airstrike on kafr naha west to aleppo    via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+109;"at least 13 killed in russian airstrike on kafr naha west to aleppo    via ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+109;"at least 13 killed in russian airstrike on kafr naha west to aleppo   ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+111;"texas news studio alert on the russian fleet in the e med and aleppo  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+111;"texas news studio update with mark meyers on the russian fleet in the e med and aleppo:  via ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+111;"ver "texas news studio update with mark meyers on the russian fleet in the e med and aleppo" en youtube - ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+120;"the latest: syria rebels dismiss putin's aleppo initiatives.. related articles: ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+120;"the latest: syria rebels dismiss putin's aleppo initiatives.. related articles: ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+120;"the latest: syria rebels dismiss putin's aleppo initiatives.. related articles: ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+28;"syrian rebels launch multiple attacks on government-controlled aleppo  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+28;"syrian rebels launch multiple attacks on gov’t held aleppo - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+28;"syrian rebels launch multiple attacks on gov't held aleppo (from ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+101;"muslims in aleppo meet christians for the first time via  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+101;"muslims in aleppo meet christians for the first time via  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+101;"muslims in aleppo meet christians for the first time ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+22;".activist action to expose putin plan to exterminate 300 000 in aleppo. media dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+22;".activist action to expose putin plan to exterminate 300 000 in aleppo. media dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+22;".activist action to expose putin plan to exterminate 300 000 in aleppo. media dontforgetsyria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+114;"give4syria yes, for syria  is out!  stories via syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+114;"give4syria yes, for syria  is out!  stories via syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+114;"give4syria yes, for syria  is out!  stories via syria aleppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied
+63;"your friday morning headlines: brexit uselection aleppo syria earthworm dave ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+63;"your friday morning headlines: brexit theresa_may uselection pharrell aleppo syria earthworm dave ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+63;"your friday morning headlines: brexit theresa_may uselection pharrell aleppo syria earthworm dave ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+73;"syrian rebels renew attack on aleppo - middle east - news - ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+73;"syrian rebels renew attack on aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+73;"syrian rebels renew attack on aleppo ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+136;"syria heavy russia'n airstrikes on western aleppo suburbs
+(3 children killed in atareb)";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+136;"urgent: two cameramen working for alalam news channel wounded in western aleppo
+breaking ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+136;"clash resume at ' new aleppo district ' w.aleppo";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+5;"u.n. says can’t use russian aleppo pause to send aid  ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+5;"un says can't use russian aleppo pause to send aid - thomson reuters foundation  indianews";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+5;"u.n. says can't use russian aleppo pause to send aid: geneva (reuters) - the united nations… ";ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+130;"aleppo could be 'bombed into smithereens', warns john kerry syria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+130;"aleppo could be 'bombed into smithereens', warns john kerry syria ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+130;"aleppo could be "bombed into smithereens" unless a new ceasefire can be agreed with russia, says us secretary of st… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+69;"inside aleppo: after you hear the drones, you can sense death   savealeppo";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+69;"inside aleppo: after you hear the drones, you can sense death  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+69;"inside aleppo: after you hear the drones, you can sense death   ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+117;"london: peace activists blocking in london to protest annihilation of aleppo city. ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+117;"activists blocking the gates of the in london because of russian plans to 'annihilate' and 'cleans… ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+117;"peace activists blockade in london to protest ‘annihilation’ of aleppo     ";ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+77;"overview of military situation in aleppo city on november 4, 2016 ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+77;"overview of military situation in aleppo city on november 4, 2016  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+77;"overview of military situation in aleppo city on november 4, 2016  ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+151;"attack on west aleppo monitored by russian uav.  ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+151;"launchpad for attacks on west aleppo";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+151;"bluehand bluehandfamily britainfirst iran: syrianarmy repels heavy terrorist attacks west of aleppo
+
+… ";ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+142;"250,000 syrians under siege in aleppo. no food, electricity, or access to medicines. care demands humanitarian a… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+142;"250,000 syrians under siege in aleppo. no food, electricity, or access to medicines. care demands humanitarian a… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+142;"250,000 syrians under siege in aleppo. no food, electricity, or access to medicines. care demands humanitarian a… ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.denied;ClusterClass.denied
+152;"army regains control over new areas in damascus countryside, thwarts terrorist attack in aleppo... ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+152;"death toll from terrorist attacks on aleppo rises to 12, with over … – al-manar tv ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed
+152;"death toll from terrorist attacks on aleppo rises to 12, with over … – al-manar tv ";ClusterClass.denied;ClusterClass.denied;ClusterClass.denied;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed;ClusterClass.confirmed

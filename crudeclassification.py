@@ -13,8 +13,8 @@ pymysql.install_as_MySQLdb()
 #################
 #<database connection>
 cnx = pymysql.connect(user='chiara', passwd='',
-             host='131.155.69.222', db='wirdm', charset="utf8mb4")
-cursor = cnx.cursor()
+#             host='131.155.69.222', db='wirdm', charset="utf8mb4")
+#cursor = cnx.cursor()
 
 
 
@@ -145,14 +145,6 @@ def counter_stream(tweet, state):
 #</helper classes>
 ##################
 
-class ClusterClass(Enum):
-	# Not yet classified
-	unclassified = 0
-	# Confirmed, or likely to be confirmed
-	confirmed = 1
-	# Unlikely to be confirmed (or even explicitly denied)
-	denied    = 2
-
 
 # Picks out some clusters that are 'obviously' true or false, leaves the rest unclassified
 class CrudeClassifier:
@@ -264,6 +256,20 @@ for ci, classifier in enumerate(classifiers):
 		tally[r] += 1
 	
 	print(tally)
+
+resById = {}
+for cluster, cclass in result.items():
+	resById[cluster.cid] = []
+	for ci in range(0,len(classifiers)):
+		resById[cluster.cid].append(allresults[ci][cluster])
+
+clus = {}
+for cluster, cclass in result.items():
+	clus[cluster.cid] = cluster
+
+joblib.dump(resById, './Results/allresults.pkl')
+joblib.dump(clus, './Results/clusters.pkl')
+
 
 with open("classified.csv", "w") as f:
 	hd = "clusterId,exampleTweet"
