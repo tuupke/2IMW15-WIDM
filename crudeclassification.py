@@ -12,7 +12,7 @@ WITH_INFLUENCE = False
 pymysql.install_as_MySQLdb()
 #################
 #<database connection>
-cnx = pymysql.connect(user='chiara', passwd='',
+#cnx = pymysql.connect(user='chiara', passwd='',
 #             host='131.155.69.222', db='wirdm', charset="utf8mb4")
 #cursor = cnx.cursor()
 
